@@ -1,0 +1,286 @@
+/* ============================================================
+   SAGELION — Design Tokens
+   Colors, type, spacing, shadow, motion.
+   ============================================================ */
+
+/* Fonts.
+   Display + serif: Cormorant Garamond — loaded from Google Fonts.
+   Sans (UI + body): PP Neue Montreal — self-hosted .otf files in fonts/.
+     Display sizes use the standard family.
+     Body sizes <= 16 px should prefer "PP Neue Montreal Text" (Book).
+
+   Weight mapping for PP Neue Montreal:
+     100 = Hairline
+     300 = Light
+     400 = Regular  (Book in the Text family)
+     600 = Semibold
+     800 = Extrabold
+*/
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap");
+
+@font-face { font-family: "PP Neue Montreal"; font-style: normal; font-weight: 100; font-display: swap;
+             src: url("fonts/PPNeueMontreal-Hairline.otf") format("opentype"); }
+@font-face { font-family: "PP Neue Montreal"; font-style: italic; font-weight: 100; font-display: swap;
+             src: url("fonts/PPNeueMontreal-HairlineItalic.otf") format("opentype"); }
+@font-face { font-family: "PP Neue Montreal"; font-style: normal; font-weight: 300; font-display: swap;
+             src: url("fonts/PPNeueMontreal-Light.otf") format("opentype"); }
+@font-face { font-family: "PP Neue Montreal"; font-style: italic; font-weight: 300; font-display: swap;
+             src: url("fonts/PPNeueMontreal-LightItalic.otf") format("opentype"); }
+@font-face { font-family: "PP Neue Montreal"; font-style: normal; font-weight: 400; font-display: swap;
+             src: url("fonts/PPNeueMontreal-Regular.otf") format("opentype"); }
+@font-face { font-family: "PP Neue Montreal"; font-style: italic; font-weight: 400; font-display: swap;
+             src: url("fonts/PPNeueMontreal-Italic.otf") format("opentype"); }
+@font-face { font-family: "PP Neue Montreal"; font-style: normal; font-weight: 600; font-display: swap;
+             src: url("fonts/PPNeueMontreal-Semibold.otf") format("opentype"); }
+@font-face { font-family: "PP Neue Montreal"; font-style: italic; font-weight: 600; font-display: swap;
+             src: url("fonts/PPNeueMontreal-SemiboldItalic.otf") format("opentype"); }
+@font-face { font-family: "PP Neue Montreal"; font-style: normal; font-weight: 800; font-display: swap;
+             src: url("fonts/PPNeueMontreal-Extrabold.otf") format("opentype"); }
+@font-face { font-family: "PP Neue Montreal"; font-style: italic; font-weight: 800; font-display: swap;
+             src: url("fonts/PPNeueMontreal-ExtraboldItalic.otf") format("opentype"); }
+
+@font-face { font-family: "PP Neue Montreal Text"; font-style: normal; font-weight: 400; font-display: swap;
+             src: url("fonts/PPNeueMontrealText-Book.otf") format("opentype"); }
+@font-face { font-family: "PP Neue Montreal Text"; font-style: italic; font-weight: 400; font-display: swap;
+             src: url("fonts/PPNeueMontrealText-BookItalic.otf") format("opentype"); }
+
+:root {
+  /* ------------------------------------------------------------
+     COLORS — Paper palette
+     Warm cream backgrounds, dark ink, single gold accent.
+     The brand is deliberately monochromatic-with-an-accent —
+     do not introduce blues, greens, or new hues casually.
+     ------------------------------------------------------------ */
+
+  /* Neutrals (base) */
+  --bg:           #fdfcf9;  /* page background — warm paper */
+  --bg-warm:      #f8f4ec;  /* hero band, soft sections */
+  --bg-warmer:    #f2ebe1;  /* gradient terminus */
+  --paper:        #ffffff;  /* card surfaces */
+  --paper-veil:   rgba(255,255,255,0.84); /* sticky header */
+
+  /* Ink (foreground) */
+  --ink:          #1a1714;  /* primary text, primary buttons */
+  --ink-strong:   #000000;  /* hover state for primary button */
+  --ink-subtle:   #4a4541;  /* secondary text */
+  --muted:        #787068;  /* body copy, captions, nav */
+
+  /* Accent — gold (the only chromatic colour) */
+  --gold:         #c39855;  /* labels, links, accent dots */
+  --gold-deep:    #8f6530;  /* logo mark gradient end */
+  --gold-light:   #d7b178;  /* logo mark gradient start */
+  --gold-soft:    #f2e7d5;  /* tinted fills, hover wash */
+  --gold-line:    rgba(195,152,85,0.30); /* hover border */
+
+  /* Lines & surfaces */
+  --line:         rgba(30,25,20,0.08);    /* default border */
+  --line-strong:  rgba(30,25,20,0.16);    /* divider */
+  --hairline:     rgba(30,25,20,0.04);
+
+  /* Semantic aliases — reach for these in components */
+  --fg-1:         var(--ink);
+  --fg-2:         var(--ink-subtle);
+  --fg-3:         var(--muted);
+  --bg-1:         var(--bg);
+  --bg-2:         var(--bg-warm);
+  --surface:      var(--paper);
+  --accent:       var(--gold);
+
+  /* ------------------------------------------------------------
+     SHADOWS — Soft, far-throw, no harsh edges.
+     Most cards rest on shadow-card; lift to shadow-hover on
+     interaction. The hero card uses shadow-float plus an inner
+     gold-tinted ring for the "premium" feel.
+     ------------------------------------------------------------ */
+  --shadow-card:   0 12px 32px -8px rgba(30,25,20,0.04);
+  --shadow-rest:   0 18px 50px rgba(32,24,17,0.08);
+  --shadow-hover:  0 32px 80px -12px rgba(30,25,20,0.16);
+  --shadow-float:  0 40px 80px -20px rgba(30,25,20,0.15),
+                   0 0 0 1px rgba(195,152,85,0.10);
+  --shadow-btn:    0 8px 24px -6px rgba(26,23,20,0.40);
+  --shadow-btn-hv: 0 12px 32px -8px rgba(26,23,20,0.50);
+
+  /* ------------------------------------------------------------
+     RADII — Generous, organic. Never sharp.
+     ------------------------------------------------------------ */
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 16px;
+  --r-lg: 20px;
+  --r-xl: 24px;
+  --r-2xl: 28px;
+  --r-3xl: 32px;
+  --r-pill: 999px;
+
+  /* ------------------------------------------------------------
+     SPACING — 4 px base, named loosely after t-shirt sizes.
+     ------------------------------------------------------------ */
+  --s-0: 0;
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+
+  /* Section rhythm */
+  --section-y: 68px;
+  --container: 1120px;
+
+  /* ------------------------------------------------------------
+     MOTION — Slow, considered ease. Never bouncy.
+     ------------------------------------------------------------ */
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:  cubic-bezier(0.45, 0, 0.55, 1);
+  --t-fast:   180ms;
+  --t-base:   300ms;
+  --t-slow:   400ms;
+
+  /* ------------------------------------------------------------
+     TYPE — Two families.
+     Serif (Cormorant Garamond) for display + brand.
+     Sans (Inter) for everything else.
+     ------------------------------------------------------------ */
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans:       "PP Neue Montreal", -apple-system, BlinkMacSystemFont,
+                     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans-text:  "PP Neue Montreal Text", "PP Neue Montreal",
+                     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                     "Helvetica Neue", Arial, sans-serif;
+  --font-mono:  ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+/* ============================================================
+   BASE — Apply tokens to native elements.
+   ============================================================ */
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: var(--fg-1);
+  background: var(--bg-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------- Headings — serif, tight leading, negative tracking ------- */
+h1, h2, h3, h4, .display, .brand-name {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--fg-1);
+  margin: 0 0 14px;
+}
+
+h1, .h1 {
+  font-size: clamp(44px, 6vw, 70px);
+  line-height: 0.94;
+  font-weight: 700;
+}
+
+h2, .h2 {
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.0;
+  font-weight: 700;
+}
+
+h3, .h3 {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+h4, .h4 {
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+/* ------- Body & utility text — sans (Text variant at small sizes) ------- */
+p, .body {
+  font-family: var(--font-sans-text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--fg-3);
+  margin: 0 0 1em;
+}
+
+.lead {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--fg-3);
+  max-width: 60ch;
+}
+
+.small, small {
+  font-family: var(--font-sans-text);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--fg-3);
+}
+
+/* ------- Eyebrows / section labels — gold, all-caps, tracked ------- */
+.eyebrow, .section-label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+
+/* ------- Pull-quotes — serif, near-display size ------- */
+.quote-text {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  line-height: 1.05;
+  font-weight: 600;
+  color: var(--fg-1);
+}
+
+/* ------- Links — gold, weight bump, never decorated ------- */
+a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--t-fast) var(--ease-out);
+}
+a:hover { color: var(--gold-deep); }
+
+/* Inline link inside body copy — inherits ink colour, gold underline */
+.body a, p a {
+  color: var(--fg-1);
+  border-bottom: 1px solid var(--gold-line);
+}
+.body a:hover, p a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ------- Code ------- */
+code, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--gold-soft);
+  color: var(--ink);
+  padding: 0.12em 0.36em;
+  border-radius: var(--r-xs);
+}
+
+/* ------- Lists ------- */
+ul, ol { padding-left: 1.1em; }
+li { color: var(--fg-3); line-height: 1.7; }
