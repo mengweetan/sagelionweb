@@ -4,7 +4,7 @@
    gold accent) — not museum mode.
    ============================================================ */
 
-@import url("colors_and_type.css?v=20260530");
+@import url("colors_and_type.css?v=20260531");
 
 * { box-sizing: border-box; }
 
@@ -1591,45 +1591,19 @@ main > section.warm-band {
 }
 .article-card.text-only .article-body { padding-top: 60px; }
 
-/* Social clip — TikTok embed alongside copy */
-.social-clip {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 40px;
-  align-items: center;
-  margin: 36px 0 0;
-  padding: 32px;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--r-2xl);
-  box-shadow: var(--shadow-card);
+/* Movie-studio card — TikTok feed clip as the card media */
+.article-card--clip .clip-media {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  background: var(--ink);
+  border-bottom: 1px solid var(--line);
 }
-.social-clip-copy h3 {
-  font-family: var(--font-serif);
-  font-size: clamp(24px, 2.6vw, 34px);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-  margin: 0 0 12px;
-  max-width: 18ch;
+.article-card--clip .clip-media .tiktok-embed {
+  width: 100% !important;
+  max-width: 325px;
+  margin: 0 auto !important;
 }
-.social-clip-copy .meta {
-  font-family: var(--font-sans);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 600;
-  margin: 0 0 10px;
-}
-.social-clip-copy p { color: var(--muted); margin: 0; max-width: 48ch; }
-.social-clip-embed {
-  flex: none;
-  width: 325px;
-  max-width: 100%;
-}
-.social-clip-embed .tiktok-embed { margin: 0 !important; }
 
 /* ---------- ADVISOR ---------- */
 .advisor-card {
@@ -2001,14 +1975,4 @@ main > section.warm-band {
   /* Help cards + donation allocation */
   .help-cards { grid-template-columns: 1fr; }
   .alloc-legend { gap: 10px 18px; }
-
-  /* Social clip */
-  .social-clip {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 24px;
-    justify-items: center;
-    text-align: center;
-  }
-  .social-clip-copy h3, .social-clip-copy p { max-width: none; }
 }
