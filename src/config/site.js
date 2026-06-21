@@ -19,6 +19,11 @@ export const site = {
 
   email: 'hello@cartXform.com',
 
+  // Contact form POST target (PHP mailer on send.cartxform.com, same pattern
+  // as send.flowdaptor.ai). Must respond with CORS headers allowing this
+  // site's origin, and a 2xx status with JSON {ok: true} on success.
+  formEndpoint: 'https://send.cartxform.com/send.php',
+
   // Full NAP — used in header, footer, contact page, and schema.org
   address: {
     line1: '13 Lorong 8 Toa Payoh',

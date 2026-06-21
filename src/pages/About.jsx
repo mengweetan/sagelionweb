@@ -25,28 +25,16 @@ const values = [
 
 const team = [
   {
-    name: 'Flowdaptor Pte Ltd',
-    role: 'Lorem ipsum',
+    name: 'Jordan Lim',
+    role: 'Founder & Conversion Lead',
     img: images.founder,
-    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    bio: '12 years building and rescuing online stores across SE Asia.',
   },
   {
-    name: 'Sarah Nguyen',
-    role: 'Tempus leo eu aenean',
+    name: 'Mei Chen',
+    role: 'Head of Engineering',
     img: images.founder2,
-    bio: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  },
-    {
-    name: 'Kevin Tan',
-    role: 'Pulvinar vivamus fringilla',
-    img: images.founder,
-    bio: 'Pulvinar vivamus fringilla lacus nec metus bibendum egestas.',
-  },
-  {
-    name: 'Anna',
-    role: 'Iaculis massa nisl',
-    img: images.founder2,
-    bio: 'Iaculis massa nisl malesuada lacinia integer nunc posuere.',
+    bio: 'WooCommerce and headless specialist obsessed with page speed.',
   },
 ]
 
