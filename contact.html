@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Book a Free Audit — CartXform | Singapore</title>
+<meta name="description" content="Book a free e-commerce conversion audit. Contact Cart Transformation at Braddell Tech, Toa Payoh, Singapore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --black: #0F0F14; --panel: #16161F; --panel-2: #1E1E2C;
+  --yellow: #FFE600; --yellow-pale: rgba(255,230,0,0.08);
+  --cyan: #00D4E8; --red: #FF3B5C; --green: #00CC74;
+  --white: #EEEEF8; --muted: #72728A;
+  --border: rgba(255,255,255,0.07); --border-y: rgba(255,230,0,0.2);
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif; background: var(--black);
+  color: var(--white); font-size: 16px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(15,15,20,0.96); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 48px; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'Press Start 2P', monospace; font-size: 13px;
+  color: var(--yellow); text-decoration: none;
+  display: flex; align-items: center; gap: 12px;
+}
+.nav-logo-tag {
+  font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600;
+  color: var(--black); background: var(--yellow);
+  padding: 2px 8px; border-radius: 4px; letter-spacing: 0.04em; text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 4px; list-style: none; align-items: center; }
+.nav-links a {
+  font-size: 13px; font-weight: 500; color: var(--muted);
+  text-decoration: none; padding: 8px 16px; border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+.nav-links a.active { color: var(--white); }
+.nav-cta {
+  background: var(--yellow) !important; color: var(--black) !important;
+  font-weight: 700 !important; border-radius: 6px !important;
+}
+/* MAIN GRID */
+.main {
+  max-width: 1160px; margin: 0 auto;
+  padding: 88px 48px 100px;
+  display: grid; grid-template-columns: 1fr 420px;
+  gap: 80px; align-items: start;
+}
+/* LEFT: FORM */
+.form-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 24px;
+}
+.eyebrow-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--yellow);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.form-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(16px, 2.2vw, 24px);
+  line-height: 1.55; letter-spacing: 0.01em;
+  color: var(--white); margin-bottom: 12px;
+}
+.form-title .hl { color: var(--yellow); }
+.form-sub {
+  font-size: 15px; color: var(--muted); line-height: 1.75;
+  margin-bottom: 40px; max-width: 440px;
+}
+.form-sub strong { color: var(--white); font-weight: 600; }
+/* FORM */
+form { display: flex; flex-direction: column; gap: 20px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label {
+  font-size: 12px; font-weight: 600; color: var(--muted);
+  letter-spacing: 0.05em; text-transform: uppercase;
+}
+.field input,
+.field select,
+.field textarea {
+  background: var(--panel); border: 1px solid var(--border);
+  color: var(--white); font-family: 'Inter', sans-serif;
+  font-size: 14px; padding: 12px 16px; border-radius: 8px;
+  outline: none; transition: border-color 0.15s;
+  -webkit-appearance: none;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--yellow);
+}
+.field input::placeholder,
+.field textarea::placeholder { color: var(--muted); }
+.field select { cursor: pointer; color: var(--white); }
+.field select option { background: var(--panel-2); color: var(--white); }
+.field textarea { resize: vertical; min-height: 120px; }
+.form-note {
+  font-size: 12px; color: var(--muted); line-height: 1.6;
+}
+.btn-submit {
+  background: var(--yellow); color: var(--black);
+  font-weight: 700; font-size: 15px;
+  padding: 16px 32px; border-radius: 8px;
+  border: none; cursor: pointer; font-family: 'Inter', sans-serif;
+  transition: opacity 0.15s, transform 0.12s;
+  align-self: flex-start;
+}
+.btn-submit:hover { opacity: 0.88; transform: translateY(-1px); }
+/* SUCCESS STATE */
+.form-success {
+  display: none; text-align: center; padding: 48px 24px;
+  background: var(--panel); border: 1px solid var(--border-y);
+  border-radius: 12px;
+}
+.form-success .success-icon {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 32px; color: var(--green);
+  margin-bottom: 20px; display: block;
+}
+.form-success h3 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px; color: var(--white); line-height: 1.6;
+  margin-bottom: 12px;
+}
+.form-success p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+/* RIGHT: INFO PANEL */
+.info-panel { display: flex; flex-direction: column; gap: 16px; position: sticky; top: 88px; }
+.info-card {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 12px; padding: 24px;
+}
+.info-card-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px; color: var(--yellow);
+  letter-spacing: 0.08em; margin-bottom: 16px;
+}
+.info-row {
+  display: flex; align-items: flex-start;
+  gap: 12px; margin-bottom: 14px;
+}
+.info-row:last-child { margin-bottom: 0; }
+.info-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.info-label {
+  font-size: 11px; font-weight: 600; color: var(--muted);
+  letter-spacing: 0.05em; text-transform: uppercase;
+  margin-bottom: 3px;
+}
+.info-value {
+  font-size: 13px; color: var(--white); line-height: 1.55;
+}
+.info-value a { color: var(--yellow); text-decoration: none; }
+.info-value a:hover { text-decoration: underline; }
+/* WHAT TO EXPECT */
+.expect-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.expect-list li {
+  font-size: 13px; color: var(--muted); line-height: 1.6;
+  padding-left: 20px; position: relative;
+}
+.expect-list li::before {
+  content: '▸'; position: absolute; left: 0;
+  font-size: 9px; color: var(--yellow); top: 2px;
+}
+.expect-list li strong { color: var(--white); font-weight: 600; }
+/* MARQUEE */
+.marquee-wrap {
+  background: var(--yellow); border-top: 1px solid rgba(0,0,0,0.15);
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding: 9px 0; overflow: hidden; white-space: nowrap;
+}
+.marquee-track { display: inline-flex; animation: marquee 26s linear infinite; }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+.marquee-item {
+  font-size: 11px; font-weight: 700; color: rgba(0,0,0,0.55);
+  padding: 0 28px; letter-spacing: 0.06em; text-transform: uppercase;
+}
+/* FOOTER */
+footer { background: var(--panel); border-top: 1px solid var(--border-y); padding: 64px 48px 40px; }
+.footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.footer-logo { font-family: 'Press Start 2P', monospace; font-size: 12px; color: var(--yellow); text-decoration: none; display: block; margin-bottom: 16px; }
+.footer-desc { font-size: 13px; color: var(--muted); line-height: 1.75; margin-bottom: 20px; }
+.footer-contact a { display: block; font-size: 13px; color: var(--muted); text-decoration: none; margin-bottom: 6px; transition: color 0.2s; }
+.footer-contact a:hover { color: var(--yellow); }
+.footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--white); }
+.footer-bottom { max-width: 1160px; margin: 0 auto; padding-top: 28px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-legal { font-size: 12px; color: var(--muted); opacity: 0.45; }
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .main { grid-template-columns: 1fr; gap: 48px; }
+  .info-panel { position: static; }
+}
+@media (max-width: 680px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .main { padding: 52px 20px 72px; }
+  .form-row { grid-template-columns: 1fr; }
+  footer { padding: 48px 20px 32px; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="assets/LOGO.jpg" alt="CartXform" style="height:36px;width:auto;image-rendering:pixelated;border-radius:4px;"></a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="index.html#how">How it works</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#" class="active nav-cta">Free audit →</a></li>
+  </ul>
+</nav>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Free audit ·</span>
+    <span class="marquee-item">No obligation ·</span>
+    <span class="marquee-item">20 minutes ·</span>
+    <span class="marquee-item">Singapore-based ·</span>
+    <span class="marquee-item">Real results ·</span>
+    <span class="marquee-item">No lock-in ·</span>
+    <span class="marquee-item">Free audit ·</span>
+    <span class="marquee-item">No obligation ·</span>
+    <span class="marquee-item">20 minutes ·</span>
+    <span class="marquee-item">Singapore-based ·</span>
+    <span class="marquee-item">Real results ·</span>
+    <span class="marquee-item">No lock-in ·</span>
+  </div>
+</div>
+
+<div class="main">
+  <!-- FORM -->
+  <div>
+    <div class="form-eyebrow"><span class="eyebrow-dot"></span> Get in touch</div>
+    <h1 class="form-title">Book your <span class="hl">free audit.</span></h1>
+    <p class="form-sub">Fill in the form and we'll be in touch within one business day to arrange a 20-minute call. <strong>No sales pitch — just an honest look at your store.</strong></p>
+
+    <form id="contact-form" action="https://formspree.io/f/hello@cartxform.com" method="POST">
+      <div class="form-row">
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="Sarah Tan" required>
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="sarah@mystore.com.sg" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="phone">WhatsApp / phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="+65 9123 4567">
+        </div>
+        <div class="field">
+          <label for="platform">Your platform</label>
+          <select id="platform" name="platform">
+            <option value="" disabled selected>Select one</option>
+            <option>WooCommerce</option>
+            <option>Shopify</option>
+            <option>Lazada</option>
+            <option>Shopee</option>
+            <option>SiteGiant</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="store">Store URL</label>
+        <input type="url" id="store" name="store" placeholder="https://mystore.com.sg">
+      </div>
+
+      <div class="field">
+        <label for="problem">What's your biggest challenge right now?</label>
+        <textarea id="problem" name="problem" placeholder="e.g. High cart abandonment, low mobile conversion, want to sync Lazada and Shopee..."></textarea>
+      </div>
+
+      <div class="field">
+        <label for="budget">Approximate monthly revenue</label>
+        <select id="budget" name="budget">
+          <option value="" disabled selected>Select range</option>
+          <option>Under S$10,000 / month</option>
+          <option>S$10,000 – S$50,000 / month</option>
+          <option>S$50,000 – S$200,000 / month</option>
+          <option>Over S$200,000 / month</option>
+          <option>Prefer not to say</option>
+        </select>
+      </div>
+
+      <p class="form-note">We'll never share your details. The audit is free with no obligation. Reply time: within 1 business day.</p>
+
+      <button type="submit" class="btn-submit">Send → Book free audit</button>
+    </form>
+
+    <div class="form-success" id="form-success">
+      <span class="success-icon">✓</span>
+      <h3>Message received.</h3>
+      <p>We'll be in touch within one business day to arrange your free audit. Check your inbox — and your spam folder just in case.</p>
+    </div>
+  </div>
+
+  <!-- INFO PANEL -->
+  <div class="info-panel">
+
+    <div class="info-card">
+      <div class="info-card-title">REACH US DIRECTLY</div>
+      <div class="info-row">
+        <span class="info-icon">📞</span>
+        <div>
+          <div class="info-label">Phone / WhatsApp</div>
+          <div class="info-value"><a href="tel:+6531000000">+65 3100 0000</a></div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">✉️</span>
+        <div>
+          <div class="info-label">Email</div>
+          <div class="info-value"><a href="mailto:hello@cartxform.com">hello@cartXform.com</a></div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">📍</span>
+        <div>
+          <div class="info-label">Studio</div>
+          <div class="info-value">
+            <a href="https://www.google.com/maps/search/?api=1&query=13+Lorong+8+Toa+Payoh+Braddell+Tech+Singapore+319261" target="_blank">
+              13 Lor 8 Toa Payoh #04-11<br>Braddell Tech · Singapore 319261
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">🕐</span>
+        <div>
+          <div class="info-label">Hours</div>
+          <div class="info-value">Mon–Fri 9am–6pm · Sat 10am–2pm<br><span style="color:var(--muted);font-size:12px;">By appointment — book ahead and we'll have coffee ready.</span></div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">🚇</span>
+        <div>
+          <div class="info-label">Getting here</div>
+          <div class="info-value" style="font-size:12px;color:var(--muted);">7-min walk from Braddell MRT (NS9) or Toa Payoh MRT (NS19). Visitor parking at Braddell Tech B1–B2, take lift to Level 4, turn left for #04-11.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-card-title">WHAT HAPPENS NEXT</div>
+      <ul class="expect-list">
+        <li><strong>Within 1 business day</strong> — we'll reply to confirm a 20-minute call time that suits you.</li>
+        <li><strong>On the call</strong> — we'll ask for read access to your analytics and take a look at your store live.</li>
+        <li><strong>Within 3–5 days</strong> — you'll receive a clear, prioritised report showing where you're losing sales and what to fix first.</li>
+        <li><strong>Your choice</strong> — take the report and act on it yourself, or let us fix it. No pressure either way.</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="index.html" class="footer-logo">CARTXFORM</a>
+      <p class="footer-desc">Conversion specialists helping Singapore e-commerce merchants recover lost carts and grow revenue. A Flowdaptor venture, based at Braddell Tech, Toa Payoh.</p>
+      <div class="footer-contact">
+        <a href="tel:+6531000000">+65 3100 0000</a>
+        <a href="mailto:hello@cartxform.com">hello@cartXform.com</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=13+Lorong+8+Toa+Payoh+Braddell+Tech+Singapore+319261" target="_blank">13 Lor 8 Toa Payoh #04-11 · S319261</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="services.html#audit">Conversion audit</a></li>
+        <li><a href="services.html#checkout">Checkout optimisation</a></li>
+        <li><a href="services.html#recovery">Cart recovery</a></li>
+        <li><a href="services.html#funnel">Sales funnel</a></li>
+        <li><a href="services.html#woo">WooCommerce dev</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About us</a></li>
+        <li><a href="contact.html">Book an audit</a></li>
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms of service</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Hours</div>
+      <ul class="footer-links">
+        <li><a style="cursor:default;pointer-events:none;">Mon–Fri: 9am–6pm</a></li>
+        <li><a style="cursor:default;pointer-events:none;">Saturday: 10am–2pm</a></li>
+        <li><a style="cursor:default;pointer-events:none;">Sunday: Closed</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-legal">© 2026 Cart Transformation · A Flowdaptor Pte. Ltd. venture · UEN: TBC</span>
+    <span class="footer-legal">7-min walk from Braddell MRT (NS9)</span>
+  </div>
+</footer>
+
+<script>
+const form = document.getElementById('contact-form');
+const success = document.getElementById('form-success');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = form.querySelector('.btn-submit');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      success.style.display = 'block';
+    } else {
+      btn.textContent = 'Something went wrong — email us directly';
+      btn.disabled = false;
+    }
+  } catch {
+    btn.textContent = 'Something went wrong — email us directly';
+    btn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>

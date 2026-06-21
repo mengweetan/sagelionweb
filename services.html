@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services & Pricing — CartXform | Singapore</title>
+<meta name="description" content="Checkout optimisation, cart abandonment recovery, WooCommerce development, and conversion audits for Singapore e-commerce merchants.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --black: #0F0F14; --panel: #16161F; --panel-2: #1E1E2C;
+  --yellow: #FFE600; --yellow-pale: rgba(255,230,0,0.08);
+  --cyan: #00D4E8; --red: #FF3B5C; --green: #00CC74; --purple: #A855F7;
+  --white: #EEEEF8; --muted: #72728A;
+  --border: rgba(255,255,255,0.07); --border-y: rgba(255,230,0,0.2);
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif; background: var(--black);
+  color: var(--white); font-size: 16px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(15,15,20,0.96); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 48px; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'Press Start 2P', monospace; font-size: 13px;
+  color: var(--yellow); text-decoration: none;
+  display: flex; align-items: center; gap: 12px;
+}
+.nav-logo-tag {
+  font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600;
+  color: var(--black); background: var(--yellow);
+  padding: 2px 8px; border-radius: 4px; letter-spacing: 0.04em; text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 4px; list-style: none; align-items: center; }
+.nav-links a {
+  font-size: 13px; font-weight: 500; color: var(--muted);
+  text-decoration: none; padding: 8px 16px; border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+.nav-links a.active { color: var(--white); }
+.nav-cta {
+  background: var(--yellow) !important; color: var(--black) !important;
+  font-weight: 700 !important; border-radius: 6px !important;
+}
+.nav-cta:hover { opacity: 0.88 !important; background: var(--yellow) !important; }
+/* HERO */
+.hero { max-width: 1160px; margin: 0 auto; padding: 88px 48px 64px; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 28px;
+}
+.eyebrow-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--yellow);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.hero h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(18px, 2.6vw, 30px);
+  line-height: 1.55; letter-spacing: 0.01em; color: var(--white); margin-bottom: 24px;
+}
+.hero h1 .hl { color: var(--yellow); }
+.hero-sub { font-size: 17px; color: var(--muted); max-width: 560px; line-height: 1.8; }
+.hero-sub strong { color: var(--white); font-weight: 600; }
+/* SERVICE NAV */
+.service-nav {
+  background: var(--panel); border-bottom: 1px solid var(--border);
+  padding: 0 48px; overflow-x: auto; white-space: nowrap;
+}
+.service-nav-inner { max-width: 1160px; margin: 0 auto; display: flex; }
+.snav-item {
+  font-size: 12px; font-weight: 600; color: var(--muted);
+  text-decoration: none; padding: 16px 20px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+  display: inline-block; letter-spacing: 0.02em;
+}
+.snav-item:hover { color: var(--yellow); border-bottom-color: var(--yellow); }
+/* MARQUEE */
+.marquee-wrap {
+  background: var(--yellow); border-top: 1px solid rgba(0,0,0,0.15);
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding: 9px 0; overflow: hidden; white-space: nowrap;
+}
+.marquee-track { display: inline-flex; animation: marquee 28s linear infinite; }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+.marquee-item {
+  font-size: 11px; font-weight: 700; color: rgba(0,0,0,0.55);
+  padding: 0 28px; letter-spacing: 0.06em; text-transform: uppercase;
+}
+/* SERVICE SECTIONS */
+.service-section { border-bottom: 1px solid var(--border); }
+.service-section:nth-child(even) { background: var(--panel); }
+.service-inner {
+  max-width: 1160px; margin: 0 auto; padding: 72px 48px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 64px; align-items: start;
+}
+.service-chip {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.05em;
+  text-transform: uppercase; padding: 4px 10px; border-radius: 4px;
+  display: inline-block; margin-bottom: 18px;
+}
+.chip-yellow { background: var(--yellow); color: var(--black); }
+.chip-cyan   { background: rgba(0,212,232,0.12); color: var(--cyan); }
+.chip-red    { background: rgba(255,59,92,0.12); color: var(--red); }
+.chip-green  { background: rgba(0,204,116,0.12); color: var(--green); }
+.chip-purple { background: rgba(168,85,247,0.12); color: var(--purple); }
+.service-title {
+  font-size: 26px; font-weight: 700; color: var(--white);
+  margin-bottom: 18px; letter-spacing: -0.02em; line-height: 1.25;
+}
+.service-desc { font-size: 15px; color: var(--muted); line-height: 1.85; margin-bottom: 24px; }
+.service-desc strong { color: var(--white); font-weight: 600; }
+.service-ideal {
+  font-size: 13px; color: var(--muted); line-height: 1.7;
+  border-left: 2px solid var(--border-y); padding-left: 16px;
+}
+.service-ideal strong {
+  color: var(--yellow); font-weight: 700; font-size: 10px;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  display: block; margin-bottom: 6px;
+}
+/* DETAIL PANEL */
+.detail-panel {
+  background: var(--panel-2); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden;
+}
+.detail-price {
+  padding: 20px 24px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: baseline; gap: 10px;
+}
+.price-label { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+.price-value { font-family: 'Press Start 2P', monospace; font-size: 12px; letter-spacing: 0.03em; }
+.p-yellow { color: var(--yellow); } .p-cyan { color: var(--cyan); }
+.p-red    { color: var(--red); }   .p-green { color: var(--green); }
+.p-purple { color: var(--purple); }
+.detail-includes { padding: 20px 24px; border-bottom: 1px solid var(--border); }
+.detail-section-label {
+  font-size: 10px; font-weight: 700; color: var(--muted);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 14px; display: block;
+}
+.includes-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.includes-list li {
+  font-size: 13px; color: var(--white);
+  padding-left: 18px; position: relative; line-height: 1.5;
+}
+.includes-list li::before { content: '▸'; position: absolute; left: 0; font-size: 9px; color: var(--yellow); top: 2px; }
+.detail-timeline {
+  padding: 20px 24px; border-bottom: 1px solid var(--border);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.timeline-label { font-size: 10px; font-weight: 700; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 5px; display: block; }
+.timeline-value { font-size: 14px; font-weight: 600; color: var(--white); }
+.detail-cta { padding: 20px 24px; }
+.btn-pixel {
+  background: var(--yellow); color: var(--black);
+  font-weight: 700; font-size: 14px;
+  padding: 14px 20px; border-radius: 8px;
+  text-decoration: none; display: block; text-align: center;
+  transition: opacity 0.15s;
+}
+.btn-pixel:hover { opacity: 0.88; }
+/* FAQ */
+.faq-section { padding: 88px 48px; max-width: 1160px; margin: 0 auto; }
+.section-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 14px; display: block;
+}
+.section-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(15px, 2vw, 22px); line-height: 1.55;
+  letter-spacing: 0.01em; color: var(--white); margin-bottom: 48px;
+}
+.faq-list { display: flex; flex-direction: column; gap: 2px; }
+.faq-item { border: 1px solid var(--border); background: var(--panel); border-radius: 8px; overflow: hidden; margin-bottom: 4px; }
+.faq-question {
+  font-size: 14px; font-weight: 600; color: var(--white);
+  padding: 20px 24px; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  transition: background 0.15s; user-select: none; line-height: 1.4;
+}
+.faq-question:hover { background: var(--panel-2); }
+.faq-arrow { color: var(--yellow); transition: transform 0.2s; flex-shrink: 0; font-size: 12px; }
+.faq-item.open .faq-arrow { transform: rotate(90deg); }
+.faq-item.open .faq-question { color: var(--yellow); }
+.faq-answer {
+  font-size: 14px; color: var(--muted); line-height: 1.85;
+  padding: 0 24px; max-height: 0; overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.faq-item.open .faq-answer { max-height: 300px; padding: 0 24px 24px; }
+.faq-answer strong { color: var(--white); font-weight: 600; }
+/* CTA */
+.cta-section { padding: 88px 48px; border-top: 1px solid var(--border); }
+.cta-inner {
+  max-width: 1160px; margin: 0 auto;
+  background: var(--panel); border: 1px solid var(--border-y);
+  border-radius: 20px; padding: 64px 56px;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 48px; align-items: center;
+}
+.cta-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(14px, 2vw, 20px); line-height: 1.55;
+  color: var(--white); margin-bottom: 14px;
+}
+.cta-title .hl { color: var(--yellow); }
+.cta-sub { font-size: 15px; color: var(--muted); line-height: 1.75; max-width: 460px; }
+.cta-right { display: flex; flex-direction: column; gap: 12px; align-items: flex-end; min-width: 180px; }
+.btn-cta {
+  background: var(--yellow); color: var(--black); font-weight: 700; font-size: 14px;
+  padding: 15px 28px; border-radius: 8px; text-decoration: none;
+  white-space: nowrap; transition: opacity 0.15s; display: inline-block;
+}
+.btn-cta:hover { opacity: 0.88; }
+.cta-phone { font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.15s; }
+.cta-phone:hover { color: var(--white); }
+.cta-note { font-size: 11px; color: var(--muted); opacity: 0.6; text-align: right; line-height: 1.7; }
+/* FOOTER */
+footer { background: var(--panel); border-top: 1px solid var(--border-y); padding: 64px 48px 40px; }
+.footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.footer-logo { font-family: 'Press Start 2P', monospace; font-size: 12px; color: var(--yellow); text-decoration: none; display: block; margin-bottom: 16px; }
+.footer-desc { font-size: 13px; color: var(--muted); line-height: 1.75; margin-bottom: 20px; }
+.footer-contact a { display: block; font-size: 13px; color: var(--muted); text-decoration: none; margin-bottom: 6px; transition: color 0.2s; }
+.footer-contact a:hover { color: var(--yellow); }
+.footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--white); }
+.footer-bottom { max-width: 1160px; margin: 0 auto; padding-top: 28px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-legal { font-size: 12px; color: var(--muted); opacity: 0.45; }
+/* RESPONSIVE */
+@media (max-width: 860px) { .service-inner { grid-template-columns: 1fr; gap: 40px; } .detail-timeline { grid-template-columns: 1fr; } .cta-inner { grid-template-columns: 1fr; padding: 48px 36px; } .cta-right { align-items: flex-start; } .cta-note { text-align: left; } }
+@media (max-width: 680px) { nav { padding: 0 20px; } .nav-links { display: none; } .hero { padding: 52px 20px 48px; } .service-nav { padding: 0 20px; } .service-inner { padding: 56px 20px; } .faq-section { padding: 64px 20px; } .cta-section { padding: 64px 20px; } footer { padding: 48px 20px 32px; } .footer-inner { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="assets/LOGO.jpg" alt="CartXform" style="height:36px;width:auto;image-rendering:pixelated;border-radius:4px;"></a>
+  <ul class="nav-links">
+    <li><a href="#" class="active">Services</a></li>
+    <li><a href="index.html#how">How it works</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#contact" class="nav-cta">Free audit →</a></li>
+  </ul>
+</nav>
+
+<section style="background:var(--black);">
+  <div class="hero">
+    <div class="hero-eyebrow"><span class="eyebrow-dot"></span> Services & pricing</div>
+    <h1>Every weapon you need to <span class="hl">convert more.</span></h1>
+    <p class="hero-sub">Pick where you're losing the most revenue — <strong>we start there.</strong> Every engagement begins with a free audit so you know the expected return before spending a dollar.</p>
+  </div>
+</section>
+
+<div class="service-nav">
+  <div class="service-nav-inner">
+    <a href="#audit" class="snav-item">▸ Audit</a>
+    <a href="#checkout" class="snav-item">▸ Checkout</a>
+    <a href="#recovery" class="snav-item">▸ Recovery</a>
+    <a href="#funnel" class="snav-item">▸ Funnel</a>
+    <a href="#woo" class="snav-item">▸ WooCommerce</a>
+    <a href="#cx" class="snav-item">▸ CX & Support</a>
+  </div>
+</div>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Free audit ·</span><span class="marquee-item">Checkout optimisation ·</span><span class="marquee-item">Cart recovery ·</span><span class="marquee-item">Sales funnel ·</span><span class="marquee-item">WooCommerce ·</span><span class="marquee-item">CX & support ·</span><span class="marquee-item">PayNow ·</span><span class="marquee-item">GrabPay ·</span><span class="marquee-item">WhatsApp flows ·</span><span class="marquee-item">Lazada sync ·</span>
+    <span class="marquee-item">Free audit ·</span><span class="marquee-item">Checkout optimisation ·</span><span class="marquee-item">Cart recovery ·</span><span class="marquee-item">Sales funnel ·</span><span class="marquee-item">WooCommerce ·</span><span class="marquee-item">CX & support ·</span><span class="marquee-item">PayNow ·</span><span class="marquee-item">GrabPay ·</span><span class="marquee-item">WhatsApp flows ·</span><span class="marquee-item">Lazada sync ·</span>
+  </div>
+</div>
+
+<!-- AUDIT -->
+<div id="audit" class="service-section">
+  <div class="service-inner">
+    <div>
+      <span class="service-chip chip-yellow">Free</span>
+      <h2 class="service-title">Conversion rate audit</h2>
+      <p class="service-desc">Before you fix anything, you need to know exactly what's broken. We pair your analytics with session recordings and heatmaps to show precisely <strong>where shoppers hesitate, backtrack, and leave</strong> — ranked by the revenue impact of fixing each one.</p>
+      <div class="service-ideal"><strong>▸ Right for you if</strong>You know you're losing sales but aren't sure where. Or you've made changes and can't tell if they're working. The audit is the smartest first move regardless of budget.</div>
+    </div>
+    <div>
+      <div class="detail-panel">
+        <div class="detail-price"><span class="price-label">Cost</span><span class="price-value p-yellow">FREE</span></div>
+        <div class="detail-includes">
+          <span class="detail-section-label">What's included</span>
+          <ul class="includes-list">
+            <li>Heatmap and session recording analysis</li>
+            <li>Funnel drop-off mapping (full journey)</li>
+            <li>Checkout friction inventory</li>
+            <li>Analytics and conversion rate baseline</li>
+            <li>Prioritised fix list ranked by revenue impact</li>
+            <li>30-min walkthrough call with findings</li>
+          </ul>
+        </div>
+        <div class="detail-timeline">
+          <div><span class="timeline-label">Turnaround</span><span class="timeline-value">3–5 business days</span></div>
+          <div><span class="timeline-label">Obligation</span><span class="timeline-value">None — ever</span></div>
+        </div>
+        <div class="detail-cta"><a href="#contact" class="btn-pixel">Book free audit →</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKOUT -->
+<div id="checkout" class="service-section">
+  <div class="service-inner">
+    <div>
+      <span class="service-chip chip-cyan">From S$1,500</span>
+      <h2 class="service-title">Checkout optimisation</h2>
+      <p class="service-desc">The checkout is where most money dies. Too many fields. Too many steps. Payment options that don't match how Singapore shoppers actually pay. We rebuild your checkout to be <strong>fast, frictionless, and built for local buyers</strong> — one-page flows, PayNow and GrabPay built in, guest checkout that doesn't fight the user.</p>
+      <div class="service-ideal"><strong>▸ Right for you if</strong>Buyers are adding to cart but not completing. Your checkout has more than 3 steps. Mobile conversion is significantly lower than desktop. You're not offering PayNow or GrabPay.</div>
+    </div>
+    <div>
+      <div class="detail-panel">
+        <div class="detail-price"><span class="price-label">Starting from</span><span class="price-value p-cyan">S$1,500</span></div>
+        <div class="detail-includes">
+          <span class="detail-section-label">What's included</span>
+          <ul class="includes-list">
+            <li>One-page and express checkout design & build</li>
+            <li>PayNow, GrabPay, and card payment integration</li>
+            <li>Guest checkout and address autofill</li>
+            <li>Mobile-first checkout flow</li>
+            <li>Order confirmation and post-purchase flow</li>
+            <li>A/B test setup for key checkout variants</li>
+          </ul>
+        </div>
+        <div class="detail-timeline">
+          <div><span class="timeline-label">Timeline</span><span class="timeline-value">2–3 weeks</span></div>
+          <div><span class="timeline-label">First results</span><span class="timeline-value">Within 2 weeks</span></div>
+        </div>
+        <div class="detail-cta"><a href="#contact" class="btn-pixel">Get a quote →</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RECOVERY -->
+<div id="recovery" class="service-section">
+  <div class="service-inner">
+    <div>
+      <span class="service-chip chip-red">From S$900/month</span>
+      <h2 class="service-title">Cart abandonment recovery</h2>
+      <p class="service-desc">68% of your shoppers leave without buying. Most of them didn't decide against it — they just got distracted. We build timed email, SMS, and WhatsApp sequences that <strong>bring the right buyer back at the right moment</strong> — without burning your list with spam.</p>
+      <div class="service-ideal"><strong>▸ Right for you if</strong>You have no recovery flow at all. Or your abandoned cart emails have open rates below 30%. Or you're not using WhatsApp for recovery — the highest-converting channel for Singapore merchants.</div>
+    </div>
+    <div>
+      <div class="detail-panel">
+        <div class="detail-price"><span class="price-label">Monthly from</span><span class="price-value p-red">S$900 / month</span></div>
+        <div class="detail-includes">
+          <span class="detail-section-label">What's included</span>
+          <ul class="includes-list">
+            <li>Three-stage recovery sequence (email + SMS + WhatsApp)</li>
+            <li>Timing and delay optimisation per channel</li>
+            <li>Dynamic discount logic that protects margin</li>
+            <li>Unsubscribe and suppression list management</li>
+            <li>Monthly performance report and sequence tuning</li>
+            <li>A/B testing of subject lines and offers</li>
+          </ul>
+        </div>
+        <div class="detail-timeline">
+          <div><span class="timeline-label">Setup</span><span class="timeline-value">7–10 days</span></div>
+          <div><span class="timeline-label">First results</span><span class="timeline-value">Within 2 weeks</span></div>
+        </div>
+        <div class="detail-cta"><a href="#contact" class="btn-pixel">Get started →</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FUNNEL -->
+<div id="funnel" class="service-section">
+  <div class="service-inner">
+    <div>
+      <span class="service-chip chip-green">Free estimate</span>
+      <h2 class="service-title">Sales funnel engineering</h2>
+      <p class="service-desc">Checkout and recovery fix the bottom of your funnel. Sales funnel engineering fixes the whole thing — from <strong>first ad click to repeat customer</strong>. We map every step, find where the most revenue is leaking, and rebuild the stages that matter most.</p>
+      <div class="service-ideal"><strong>▸ Right for you if</strong>Landing page bounce rate is high. Visitors view products but don't add to cart. You have no upsell or cross-sell in place. Post-purchase repeat rate is low.</div>
+    </div>
+    <div>
+      <div class="detail-panel">
+        <div class="detail-price"><span class="price-label">Cost</span><span class="price-value p-green">FREE ESTIMATE</span></div>
+        <div class="detail-includes">
+          <span class="detail-section-label">What's included</span>
+          <ul class="includes-list">
+            <li>Landing-to-cart journey mapping</li>
+            <li>Product page conversion audit</li>
+            <li>Upsell and cross-sell placement strategy</li>
+            <li>Post-purchase email and retention loop setup</li>
+            <li>Loyalty and repeat-purchase mechanics</li>
+            <li>Funnel performance dashboard</li>
+          </ul>
+        </div>
+        <div class="detail-timeline">
+          <div><span class="timeline-label">Scoping</span><span class="timeline-value">Free · 1 week</span></div>
+          <div><span class="timeline-label">Delivery</span><span class="timeline-value">4–8 weeks</span></div>
+        </div>
+        <div class="detail-cta"><a href="#contact" class="btn-pixel">Get free estimate →</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WOOCOMMERCE -->
+<div id="woo" class="service-section">
+  <div class="service-inner">
+    <div>
+      <span class="service-chip chip-purple">From S$2,500</span>
+      <h2 class="service-title">WooCommerce development</h2>
+      <p class="service-desc">A slow or disconnected store costs you sales every single day. We build <strong>custom WooCommerce stores engineered for speed</strong> — with clean two-way syncs to Lazada and Shopee, your logistics provider, and your accounting software. No more oversold stock. No more double-entry.</p>
+      <div class="service-ideal"><strong>▸ Right for you if</strong>Your store scores below 70 on Core Web Vitals. You're manually syncing inventory between channels. You need custom functionality your current theme can't support. You're migrating from another platform.</div>
+    </div>
+    <div>
+      <div class="detail-panel">
+        <div class="detail-price"><span class="price-label">Starting from</span><span class="price-value p-purple">S$2,500</span></div>
+        <div class="detail-includes">
+          <span class="detail-section-label">What's included</span>
+          <ul class="includes-list">
+            <li>Custom theme design and development</li>
+            <li>Lazada and Shopee two-way inventory sync</li>
+            <li>Logistics integration (J&T, Ninja Van, etc.)</li>
+            <li>Accounting software sync (Xero, QuickBooks)</li>
+            <li>Core Web Vitals and page speed tuning</li>
+            <li>Headless builds available on request</li>
+          </ul>
+        </div>
+        <div class="detail-timeline">
+          <div><span class="timeline-label">Timeline</span><span class="timeline-value">4–8 weeks</span></div>
+          <div><span class="timeline-label">Support after</span><span class="timeline-value">30 days included</span></div>
+        </div>
+        <div class="detail-cta"><a href="#contact" class="btn-pixel">Get a quote →</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CX -->
+<div id="cx" class="service-section">
+  <div class="service-inner">
+    <div>
+      <span class="service-chip chip-red">Custom plans</span>
+      <h2 class="service-title">E-commerce CX and support</h2>
+      <p class="service-desc">Most merchants treat support as a cost centre. We turn it into a sales channel. Fast, accurate answers reduce cart abandonment, cut refunds, and build the kind of trust that drives <strong>repeat orders and word-of-mouth</strong>.</p>
+      <div class="service-ideal"><strong>▸ Right for you if</strong>Response time to buyer queries is over 2 hours. Refund rate is above 5%. Your team spends significant time on repetitive questions. You have no post-purchase follow-up sequence.</div>
+    </div>
+    <div>
+      <div class="detail-panel">
+        <div class="detail-price"><span class="price-label">Cost</span><span class="price-value p-red">CUSTOM</span></div>
+        <div class="detail-includes">
+          <span class="detail-section-label">What's included</span>
+          <ul class="includes-list">
+            <li>Live chat and helpdesk platform setup</li>
+            <li>Returns, refund, and exchange workflow design</li>
+            <li>FAQ automation and chatbot configuration</li>
+            <li>Support team playbooks and training</li>
+            <li>Post-purchase follow-up sequence</li>
+            <li>Monthly support performance review</li>
+          </ul>
+        </div>
+        <div class="detail-timeline">
+          <div><span class="timeline-label">Scoping</span><span class="timeline-value">Free · 1 week</span></div>
+          <div><span class="timeline-label">Setup</span><span class="timeline-value">2–4 weeks</span></div>
+        </div>
+        <div class="detail-cta"><a href="#contact" class="btn-pixel">Discuss your needs →</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <span class="section-eyebrow">Questions</span>
+  <h2 class="section-title">Still unsure?<br>We've got answers.</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-question">How is pricing structured? <span class="faq-arrow">▸</span></div>
+      <div class="faq-answer">Most projects are <strong>fixed-scope with a clear quote up front</strong> — no surprises. Recovery and CX work runs month-to-month. We always start with a free audit so you know the expected return before committing any money. If the numbers don't stack up, we'll tell you.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you work with Shopify, WooCommerce, and marketplaces? <span class="faq-arrow">▸</span></div>
+      <div class="faq-answer">Yes. We work across <strong>WooCommerce, Shopify, and native Lazada/Shopee storefronts</strong>. We connect them so stock, orders, and pricing stay in sync across all channels — no more manual updates, no more overselling.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How fast will I see results? <span class="faq-arrow">▸</span></div>
+      <div class="faq-answer"><strong>Checkout and recovery fixes typically show measurable lift within 2–4 weeks.</strong> Cart abandonment recovery sequences usually recover their cost within the first month. Larger funnel rebuilds compound over a quarter.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Are you based in Singapore? <span class="faq-arrow">▸</span></div>
+      <div class="faq-answer">Yes — our studio is at <strong>Braddell Tech, 13 Lor 8 Toa Payoh, Singapore 319261</strong>. We understand local payment habits, delivery options, and buyer behaviour first-hand. We don't need you to explain what PayNow is.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do I have to commit to a long contract? <span class="faq-arrow">▸</span></div>
+      <div class="faq-answer">No. Project work is fixed-scope with no ongoing obligation. Monthly retainers run month-to-month — <strong>cancel any time with 30 days' notice.</strong> We earn the next month by doing good work.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What do you need from me to get started? <span class="faq-arrow">▸</span></div>
+      <div class="faq-answer">For the free audit: access to your Google Analytics and a 30-minute call. That's it. <strong>We do the digging — you don't need to prepare a brief.</strong> For project work, we scope everything together before anything gets signed.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div id="contact" class="cta-section">
+  <div class="cta-inner">
+    <div>
+      <div class="cta-title">Ready to stop losing <span class="hl">carts?</span></div>
+      <p class="cta-sub">Start with the free audit. We'll show you exactly where you're losing sales and what to fix first — no obligation to go further.</p>
+    </div>
+    <div class="cta-right">
+      <a href="mailto:hello@cartxform.com" class="btn-cta">Book free audit →</a>
+      <a href="tel:+6531000000" class="cta-phone">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3a1 1 0 011-1h2.5a1 1 0 01.95.68l.8 2.4a1 1 0 01-.23 1.02L5.6 7.47a9.06 9.06 0 004.93 4.93l1.37-1.41a1 1 0 011.02-.23l2.4.8A1 1 0 0116 12.5V15a1 1 0 01-1 1h-1C6.16 16 0 9.84 0 2.5V1.5A1 1 0 011 .5h2.5" stroke-linecap="round"/></svg>
+        +65 3100 0000
+      </a>
+      <p class="cta-note">Mon–Fri 9am–6pm · Sat 10am–2pm<br>Braddell Tech, Toa Payoh</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="index.html" class="footer-logo">CARTXFORM</a>
+      <p class="footer-desc">Conversion specialists helping Singapore e-commerce merchants recover lost carts and grow revenue. A Flowdaptor venture, based at Braddell Tech, Toa Payoh.</p>
+      <div class="footer-contact">
+        <a href="tel:+6531000000">+65 3100 0000</a>
+        <a href="mailto:hello@cartxform.com">hello@cartXform.com</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=13+Lorong+8+Toa+Payoh+Braddell+Tech+Singapore+319261" target="_blank">13 Lor 8 Toa Payoh #04-11 · S319261</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#audit">Conversion audit</a></li>
+        <li><a href="#checkout">Checkout optimisation</a></li>
+        <li><a href="#recovery">Cart recovery</a></li>
+        <li><a href="#funnel">Sales funnel</a></li>
+        <li><a href="#woo">WooCommerce dev</a></li>
+        <li><a href="#cx">CX & support</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About us</a></li>
+        <li><a href="#contact">Book an audit</a></li>
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms of service</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Hours</div>
+      <ul class="footer-links">
+        <li><a style="cursor:default;pointer-events:none;">Mon–Fri: 9am–6pm</a></li>
+        <li><a style="cursor:default;pointer-events:none;">Saturday: 10am–2pm</a></li>
+        <li><a style="cursor:default;pointer-events:none;">Sunday: Closed</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-legal">© 2026 Cart Transformation · A Flowdaptor Pte. Ltd. venture · UEN: TBC</span>
+    <span class="footer-legal">7-min walk from Braddell MRT (NS9)</span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// Hero entrance
+gsap.timeline({ defaults: { ease: 'power3.out' } })
+  .from('nav', { y: -64, opacity: 0, duration: 0.6 })
+  .from('.hero-eyebrow', { y: 20, opacity: 0, duration: 0.5 }, '-=0.2')
+  .from('.hero h1', { y: 32, opacity: 0, duration: 0.6 }, '-=0.3')
+  .from('.hero-sub', { y: 24, opacity: 0, duration: 0.5 }, '-=0.3');
+
+// Service sections fade in
+gsap.utils.toArray('.service-inner').forEach(el => {
+  gsap.from(el, {
+    scrollTrigger: { trigger: el, start: 'top 85%', once: true },
+    y: 36, opacity: 0, duration: 0.6, ease: 'power2.out'
+  });
+});
+
+// FAQ items
+gsap.utils.toArray('.faq-item').forEach((el, i) => {
+  gsap.from(el, {
+    scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+    y: 20, opacity: 0, duration: 0.4, delay: i * 0.05, ease: 'power2.out'
+  });
+});
+
+// Logo glow
+const logoImg = document.querySelector('.nav-logo img');
+if (logoImg) {
+  gsap.to(logoImg, {
+    filter: 'drop-shadow(0 0 10px rgba(0,212,232,0.7)) drop-shadow(0 0 20px rgba(255,230,0,0.4))',
+    duration: 1.8, repeat: -1, yoyo: true, ease: 'sine.inOut'
+  });
+}
+
+// Marquee pause
+const marqueeTrack = document.querySelector('.marquee-track');
+if (marqueeTrack) {
+  marqueeTrack.parentElement.addEventListener('mouseenter', () => marqueeTrack.style.animationPlayState = 'paused');
+  marqueeTrack.parentElement.addEventListener('mouseleave', () => marqueeTrack.style.animationPlayState = 'running');
+}
+</script>
+</body>
+</html>

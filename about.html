@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — CartXform | Singapore</title>
+<meta name="description" content="Meet the team behind Cart Transformation — Singapore's e-commerce conversion specialists. Built by Flowdaptor, powered by people who've been merchants themselves.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --black: #0F0F14; --panel: #16161F; --panel-2: #1E1E2C;
+  --yellow: #FFE600; --yellow-pale: rgba(255,230,0,0.08);
+  --cyan: #00D4E8; --red: #FF3B5C; --green: #00CC74; --purple: #A855F7;
+  --white: #EEEEF8; --muted: #72728A;
+  --border: rgba(255,255,255,0.07); --border-y: rgba(255,230,0,0.2);
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif; background: var(--black);
+  color: var(--white); font-size: 16px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(15,15,20,0.96); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 48px; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'Press Start 2P', monospace; font-size: 13px;
+  color: var(--yellow); text-decoration: none;
+  display: flex; align-items: center; gap: 12px;
+}
+.nav-logo-tag {
+  font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600;
+  color: var(--black); background: var(--yellow);
+  padding: 2px 8px; border-radius: 4px; letter-spacing: 0.04em; text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 4px; list-style: none; align-items: center; }
+.nav-links a {
+  font-size: 13px; font-weight: 500; color: var(--muted);
+  text-decoration: none; padding: 8px 16px; border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+.nav-links a.active { color: var(--white); }
+.nav-cta {
+  background: var(--yellow) !important; color: var(--black) !important;
+  font-weight: 700 !important; border-radius: 6px !important;
+}
+.nav-cta:hover { opacity: 0.88 !important; background: var(--yellow) !important; }
+/* HERO */
+.hero {
+  max-width: 1160px; margin: 0 auto;
+  padding: 88px 48px 72px;
+  display: grid; grid-template-columns: 1fr 320px;
+  gap: 64px; align-items: center;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 28px;
+}
+.eyebrow-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--yellow);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.hero h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(18px, 2.6vw, 30px);
+  line-height: 1.55; letter-spacing: 0.01em;
+  color: var(--white); margin-bottom: 24px;
+}
+.hero h1 .hl { color: var(--yellow); }
+.hero-sub { font-size: 17px; color: var(--muted); max-width: 480px; line-height: 1.8; }
+.hero-sub strong { color: var(--white); font-weight: 600; }
+/* PLAYER CARD */
+.player-card {
+  background: var(--panel); border: 1px solid var(--border-y);
+  border-radius: 16px; padding: 28px 24px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.player-title {
+  font-family: 'Press Start 2P', monospace; font-size: 7px;
+  color: var(--yellow); letter-spacing: 0.1em; text-align: center;
+}
+.player-divider { border: none; border-top: 1px solid var(--border); }
+.player-stat { display: flex; justify-content: space-between; align-items: center; }
+.player-stat-label { font-size: 12px; color: var(--muted); }
+.player-stat-value { font-family: 'Press Start 2P', monospace; font-size: 8px; letter-spacing: 0.04em; }
+.v-yellow { color: var(--yellow); } .v-cyan { color: var(--cyan); }
+.v-green  { color: var(--green); } .v-red   { color: var(--red); }
+/* MARQUEE */
+.marquee-wrap {
+  background: var(--yellow); border-top: 1px solid rgba(0,0,0,0.15);
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding: 9px 0; overflow: hidden; white-space: nowrap;
+}
+.marquee-track { display: inline-flex; animation: marquee 26s linear infinite; }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+.marquee-item {
+  font-size: 11px; font-weight: 700; color: rgba(0,0,0,0.55);
+  padding: 0 28px; letter-spacing: 0.06em; text-transform: uppercase;
+}
+/* STORY */
+.story-section { padding: 88px 48px; border-top: 1px solid var(--border); }
+.story-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: grid; grid-template-columns: 260px 1fr;
+  gap: 72px; align-items: start;
+}
+.story-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+  margin-bottom: 16px; display: block;
+}
+.story-heading {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(13px, 1.6vw, 17px);
+  line-height: 1.7; letter-spacing: 0.02em; color: var(--white);
+}
+.story-body { display: flex; flex-direction: column; gap: 20px; }
+.story-body p { font-size: 15px; color: var(--muted); line-height: 1.85; }
+.story-body p strong { color: var(--white); font-weight: 600; }
+.fd-badge {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 14px 18px; border: 1px solid var(--border-y);
+  background: var(--yellow-pale); text-decoration: none;
+  border-radius: 10px; margin-top: 8px; transition: background 0.2s;
+}
+.fd-badge:hover { background: rgba(255,230,0,0.12); }
+.fd-badge img { height: 18px; width: auto; filter: brightness(0) invert(1); opacity: 0.75; }
+.fd-badge-text { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.fd-badge-text strong { display: block; color: var(--yellow); font-size: 12px; font-weight: 600; }
+/* PRINCIPLES */
+.principles-section {
+  padding: 88px 48px; background: var(--panel);
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+.principles-inner { max-width: 1160px; margin: 0 auto; }
+.section-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+  margin-bottom: 14px; display: block;
+}
+.section-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(15px, 2vw, 22px);
+  line-height: 1.55; letter-spacing: 0.01em;
+  color: var(--white); margin-bottom: 48px;
+}
+.principles-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+.principle {
+  background: var(--black); border: 1px solid var(--border);
+  border-radius: 12px; padding: 32px 28px;
+  border-top: 2px solid transparent;
+  transition: border-top-color 0.2s, background 0.2s;
+}
+.principle:hover { border-top-color: var(--yellow); background: var(--panel-2); }
+.principle-icon { font-size: 24px; margin-bottom: 16px; display: block; }
+.principle-title {
+  font-size: 15px; font-weight: 700; color: var(--white);
+  margin-bottom: 10px; letter-spacing: -0.01em;
+}
+.principle-desc { font-size: 14px; color: var(--muted); line-height: 1.75; }
+/* TEAM */
+.team-section { padding: 88px 48px; border-top: 1px solid var(--border); }
+.team-inner { max-width: 1160px; margin: 0 auto; }
+.team-grid {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 16px; margin-top: 48px;
+}
+.team-card {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden;
+  transition: border-color 0.2s;
+}
+.team-card:hover { border-color: var(--border-y); }
+.team-photo-wrap {
+  width: 100%; aspect-ratio: 1/1; overflow: hidden;
+  background: var(--panel-2);
+}
+.team-photo-wrap img {
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center top; display: block;
+  filter: grayscale(20%) contrast(1.05);
+  transition: filter 0.3s;
+}
+.team-card:hover .team-photo-wrap img { filter: grayscale(0%) contrast(1.05); }
+.team-info { padding: 20px 18px; border-top: 2px solid var(--yellow); }
+.team-name {
+  font-family: 'Press Start 2P', monospace; font-size: 8px;
+  color: var(--white); letter-spacing: 0.04em; line-height: 1.6; margin-bottom: 5px;
+}
+.team-role {
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--cyan); margin-bottom: 12px;
+}
+.team-bio { font-size: 12px; color: var(--muted); line-height: 1.7; }
+/* STATS ROW */
+.stats-row {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  background: var(--panel); border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.stat-block {
+  padding: 40px 32px; text-align: center;
+  border-right: 1px solid var(--border);
+}
+.stat-block:last-child { border-right: none; }
+.stat-number {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(18px, 2.5vw, 26px);
+  margin-bottom: 10px; line-height: 1;
+}
+.stat-label { font-size: 13px; color: var(--muted); line-height: 1.55; }
+/* CTA */
+.cta-section { padding: 100px 48px; }
+.cta-inner {
+  max-width: 1160px; margin: 0 auto;
+  background: var(--panel); border: 1px solid var(--border-y);
+  border-radius: 20px; padding: 64px 56px;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 48px; align-items: center;
+}
+.cta-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(14px, 2vw, 20px);
+  line-height: 1.55; letter-spacing: 0.01em;
+  color: var(--white); margin-bottom: 14px;
+}
+.cta-title .hl { color: var(--yellow); }
+.cta-sub { font-size: 15px; color: var(--muted); line-height: 1.75; max-width: 460px; }
+.cta-right { display: flex; flex-direction: column; gap: 12px; align-items: flex-end; min-width: 180px; }
+.btn-cta {
+  background: var(--yellow); color: var(--black);
+  font-weight: 700; font-size: 14px;
+  padding: 15px 28px; border-radius: 8px;
+  text-decoration: none; white-space: nowrap;
+  transition: opacity 0.15s; display: inline-block;
+}
+.btn-cta:hover { opacity: 0.88; }
+/* FOOTER */
+footer { background: var(--panel); border-top: 1px solid var(--border-y); padding: 64px 48px 40px; }
+.footer-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 48px; margin-bottom: 48px;
+}
+.footer-logo {
+  font-family: 'Press Start 2P', monospace; font-size: 12px;
+  color: var(--yellow); text-decoration: none; display: block; margin-bottom: 16px;
+}
+.footer-desc { font-size: 13px; color: var(--muted); line-height: 1.75; margin-bottom: 20px; }
+.footer-contact a {
+  display: block; font-size: 13px; color: var(--muted);
+  text-decoration: none; margin-bottom: 6px; transition: color 0.2s;
+}
+.footer-contact a:hover { color: var(--yellow); }
+.footer-col-title {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--white); margin-bottom: 16px;
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--white); }
+.footer-bottom {
+  max-width: 1160px; margin: 0 auto; padding-top: 28px;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+}
+.footer-legal { font-size: 12px; color: var(--muted); opacity: 0.45; }
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; padding: 64px 32px; }
+  .story-inner { grid-template-columns: 1fr; gap: 40px; }
+  .principles-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2,1fr); }
+  .stats-row { grid-template-columns: 1fr; }
+  .cta-inner { grid-template-columns: 1fr; padding: 48px 36px; }
+  .cta-right { align-items: flex-start; }
+}
+@media (max-width: 680px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 52px 20px; }
+  .story-section, .principles-section, .team-section, .cta-section { padding: 64px 20px; }
+  footer { padding: 48px 20px 32px; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    CARTXFORM <span class="nav-logo-tag">SG</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="index.html#how">How it works</a></li>
+    <li><a href="#" class="active">About</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Free audit →</a></li>
+  </ul>
+</nav>
+
+<section style="background:var(--black);">
+  <div class="hero">
+    <div>
+      <div class="hero-eyebrow"><span class="eyebrow-dot"></span> Our story</div>
+      <h1>Built by people who've been <span class="hl">the merchant.</span></h1>
+      <p class="hero-sub">Cart Transformation grew out of a simple observation: <strong>most agencies fix the ads and forget the checkout.</strong> We built a studio to fix the part that actually closes the sale.</p>
+    </div>
+    <div class="player-card">
+      <div class="player-title">TEAM STATS</div>
+      <hr class="player-divider">
+      <div class="player-stat">
+        <span class="player-stat-label">Founded</span>
+        <span class="player-stat-value v-yellow">2026</span>
+      </div>
+      <div class="player-stat">
+        <span class="player-stat-label">Location</span>
+        <span class="player-stat-value v-cyan">SG 319261</span>
+      </div>
+      <div class="player-stat">
+        <span class="player-stat-label">Parent co</span>
+        <span class="player-stat-value v-green">Flowdaptor</span>
+      </div>
+      <div class="player-stat">
+        <span class="player-stat-label">Team</span>
+        <span class="player-stat-value v-yellow">Small · Senior</span>
+      </div>
+      <div class="player-stat">
+        <span class="player-stat-label">Audit cost</span>
+        <span class="player-stat-value v-green">Free</span>
+      </div>
+      <div class="player-stat">
+        <span class="player-stat-label">Lock-in</span>
+        <span class="player-stat-value v-red">None</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Local first ·</span>
+    <span class="marquee-item">No lock-in ·</span>
+    <span class="marquee-item">Honest scopes ·</span>
+    <span class="marquee-item">Senior team ·</span>
+    <span class="marquee-item">PayNow ready ·</span>
+    <span class="marquee-item">WhatsApp flows ·</span>
+    <span class="marquee-item">Flowdaptor AI ·</span>
+    <span class="marquee-item">Free audit ·</span>
+    <span class="marquee-item">Local first ·</span>
+    <span class="marquee-item">No lock-in ·</span>
+    <span class="marquee-item">Honest scopes ·</span>
+    <span class="marquee-item">Senior team ·</span>
+    <span class="marquee-item">PayNow ready ·</span>
+    <span class="marquee-item">WhatsApp flows ·</span>
+    <span class="marquee-item">Flowdaptor AI ·</span>
+    <span class="marquee-item">Free audit ·</span>
+  </div>
+</div>
+
+<section class="story-section">
+  <div class="story-inner">
+    <div>
+      <span class="story-label">Origin story</span>
+      <h2 class="story-heading">A Flowdaptor venture. Founded Singapore · 2026.</h2>
+    </div>
+    <div class="story-body">
+      <p>Cart Transformation is a specialist brand from <strong>Flowdaptor</strong> — a Singapore-based AI automation studio. Where Flowdaptor builds the infrastructure that makes businesses run on AI, Cart Transformation applies that same engineering rigour to one specific problem: the revenue merchants lose between "add to cart" and "order placed".</p>
+      <p>We started because <strong>Sarah had spent a decade running e-commerce businesses</strong> and knew exactly what a bad checkout costs — not in theory, but in real, daily, measurable lost revenue. When she joined forces with the Flowdaptor team, the combination became obvious: merchant experience plus production-grade AI automation, applied to cart recovery, checkout optimisation, and conversion funnels.</p>
+      <p>We're small by design. <strong>The person who audits your store is the person who fixes it.</strong> No account managers, no hand-offs, no junior teams running your work while the seniors take the credit.</p>
+      <a href="https://flowdaptor.ai" target="_blank" class="fd-badge">
+        <img src="https://flowdaptor.ai/assets/flowdaptor-logo-small.png" alt="Flowdaptor">
+        <span class="fd-badge-text">
+          <strong>A Flowdaptor venture</strong>
+          AI automation · Singapore
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="principles-section">
+  <div class="principles-inner">
+    <span class="section-eyebrow">What we stand for</span>
+    <h2 class="section-title">Principles that keep us honest.</h2>
+    <div class="principles-grid">
+      <div class="principle">
+        <span class="principle-icon">🗺️</span>
+        <div class="principle-title">Local first</div>
+        <div class="principle-desc">Born and run in Singapore. We know PayNow, GrabPay, WhatsApp commerce, and how SE-Asian shoppers actually buy — without needing it explained.</div>
+      </div>
+      <div class="principle">
+        <span class="principle-icon">🔓</span>
+        <div class="principle-title">No fluff. No lock-in.</div>
+        <div class="principle-desc">Plain reporting, honest scopes, and work you own outright. We earn the next project by doing good work, never by trapping you in a retainer you don't need.</div>
+      </div>
+      <div class="principle">
+        <span class="principle-icon">📈</span>
+        <div class="principle-title">Invested in your numbers</div>
+        <div class="principle-desc">We treat your conversion rate like our own. If a fix won't move real revenue, we won't sell it to you. The audit is free precisely because we want to be honest before we start.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team-section">
+  <div class="team-inner">
+    <span class="section-eyebrow">The team</span>
+    <h2 class="section-title">Senior people. No hand-offs.</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-photo-wrap">
+          <img src="https://flowdaptor.ai/assets/CS.jpeg" alt="CS Chong" style="object-position: center 35%;">
+        </div>
+        <div class="team-info">
+          <div class="team-name">CS CHONG</div>
+          <div class="team-role">CEO · Co-Founder</div>
+          <div class="team-bio">Solutions architect behind every conversion system we deploy. Leads scoping and turns messy problems into production-ready automations.</div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo-wrap">
+          <img src="https://flowdaptor.ai/assets/MW.jpeg" alt="Meng Wee Tan" style="object-position: center 35%;">
+        </div>
+        <div class="team-info">
+          <div class="team-name">MENG WEE TAN</div>
+          <div class="team-role">Co-Founder · Engineer</div>
+          <div class="team-bio">Two decades across enterprise software, fintech, and AI. Builds the checkout and recovery infrastructure that works in production, not just demos.</div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo-wrap">
+          <img src="assets/KC.png" alt="Kevin Chua" style="object-position: center 35%;">
+        </div>
+        <div class="team-info">
+          <div class="team-name">KEVIN CHUA</div>
+          <div class="team-role">Project Director</div>
+          <div class="team-bio">15+ years in technology programme management. Keeps every engagement on track from scoping to go-live across Southeast Asia.</div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo-wrap">
+          <img src="assets/sa.png" alt="Sarah Nguyen" style="object-position:center 15%;filter:grayscale(25%) contrast(1.08) brightness(0.85);">
+        </div>
+        <div class="team-info">
+          <div class="team-name">SARAH NGUYEN</div>
+          <div class="team-role">E-commerce Lead</div>
+          <div class="team-bio">Ten years building and operating e-commerce businesses from the merchant side. She knows what a broken checkout costs because she's lived it.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-row">
+  <div class="stat-block">
+    <div class="stat-number" style="color:var(--yellow);">2026</div>
+    <div class="stat-label">Founded in Singapore as a Flowdaptor venture</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-number" style="color:var(--cyan);">10 yrs</div>
+    <div class="stat-label">Real merchant experience on the team</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-number" style="color:var(--green);">Free</div>
+    <div class="stat-label">Cost of your first audit — we earn trust before we earn fees</div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <div class="cta-inner">
+    <div>
+      <div class="cta-title">Let's find what your checkout<br>is <span class="hl">costing you.</span></div>
+      <p class="cta-sub">A free, no-pressure audit. We look at your store and tell you honestly where the biggest wins are — no obligation to go further.</p>
+    </div>
+    <div class="cta-right">
+      <a href="index.html#contact" class="btn-cta">Book free audit →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="index.html" class="footer-logo">CARTXFORM</a>
+      <p class="footer-desc">Conversion specialists helping Singapore e-commerce merchants recover lost carts and grow revenue. A Flowdaptor venture, based at Braddell Tech, Toa Payoh.</p>
+      <div class="footer-contact">
+        <a href="tel:+6531000000">+65 3100 0000</a>
+        <a href="mailto:hello@cartxform.com">hello@cartXform.com</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=13+Lorong+8+Toa+Payoh+Braddell+Tech+Singapore+319261" target="_blank">13 Lor 8 Toa Payoh #04-11 · S319261</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="services.html#audit">Conversion audit</a></li>
+        <li><a href="services.html#checkout">Checkout optimisation</a></li>
+        <li><a href="services.html#recovery">Cart recovery</a></li>
+        <li><a href="services.html#funnel">Sales funnel</a></li>
+        <li><a href="services.html#woo">WooCommerce dev</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About us</a></li>
+        <li><a href="index.html#contact">Book an audit</a></li>
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms of service</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Hours</div>
+      <ul class="footer-links">
+        <li><a style="cursor:default;pointer-events:none;">Mon–Fri: 9am–6pm</a></li>
+        <li><a style="cursor:default;pointer-events:none;">Saturday: 10am–2pm</a></li>
+        <li><a style="cursor:default;pointer-events:none;">Sunday: Closed</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-legal">© 2026 Cart Transformation · A Flowdaptor Pte. Ltd. venture · UEN: TBC</span>
+    <span class="footer-legal">7-min walk from Braddell MRT (NS9)</span>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// Hero entrance
+gsap.timeline({ defaults: { ease: 'power3.out' } })
+  .from('nav', { y: -64, opacity: 0, duration: 0.6 })
+  .from('.hero-eyebrow', { y: 20, opacity: 0, duration: 0.5 }, '-=0.2')
+  .from('.hero h1', { y: 32, opacity: 0, duration: 0.6 }, '-=0.3')
+  .from('.hero-sub', { y: 24, opacity: 0, duration: 0.5 }, '-=0.3')
+  .from('.player-card', { x: 40, opacity: 0, duration: 0.7, ease: 'power2.out' }, '-=0.4');
+
+// Story
+gsap.from('.story-inner', {
+  scrollTrigger: { trigger: '.story-inner', start: 'top 85%', once: true },
+  y: 36, opacity: 0, duration: 0.6, ease: 'power2.out'
+});
+
+// Principles
+gsap.utils.toArray('.principle').forEach((el, i) => {
+  gsap.from(el, {
+    scrollTrigger: { trigger: el, start: 'top 88%', once: true },
+    y: 30, opacity: 0, duration: 0.5, delay: i * 0.1, ease: 'power2.out'
+  });
+});
+
+// Team cards
+gsap.utils.toArray('.team-card').forEach((card, i) => {
+  gsap.from(card, {
+    scrollTrigger: { trigger: card, start: 'top 90%', once: true },
+    y: 40, opacity: 0, duration: 0.55, delay: (i % 4) * 0.1, ease: 'power2.out'
+  });
+});
+
+// Logo glow
+const logoImg = document.querySelector('.nav-logo img');
+if (logoImg) {
+  gsap.to(logoImg, {
+    filter: 'drop-shadow(0 0 10px rgba(0,212,232,0.7)) drop-shadow(0 0 20px rgba(255,230,0,0.4))',
+    duration: 1.8, repeat: -1, yoyo: true, ease: 'sine.inOut'
+  });
+}
+
+// Marquee pause
+const marqueeTrack = document.querySelector('.marquee-track');
+if (marqueeTrack) {
+  marqueeTrack.parentElement.addEventListener('mouseenter', () => marqueeTrack.style.animationPlayState = 'paused');
+  marqueeTrack.parentElement.addEventListener('mouseleave', () => marqueeTrack.style.animationPlayState = 'running');
+}
+</script>
+</body>
+</html>
