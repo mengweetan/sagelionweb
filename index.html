@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-SG" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#564A40" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Title, description, canonical, and OG tags are injected per route at
+         build time by the <Seo> component (src/components/Seo.jsx). -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:locale" content="en_SG" />
+
+    <!-- No-JS safety: remove the .no-js class as early as possible so that,
+         when scripts run, entrance animations behave normally. If JS is off,
+         the .no-js rule in index.css keeps all content visible. -->
+    <script>
+      document.documentElement.classList.remove('no-js')
+    </script>
+
+    <!-- Fonts: Space Grotesk (display) + Inter (body) + Space Mono (data) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- LocalBusiness structured data for local SEO (shared across all pages) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Cart Transformation",
+        "url": "https://cartXform.com",
+        "image": "https://cartXform.com/og-image.jpg",
+        "description": "E-commerce conversion specialists helping Singapore merchants recover abandoned carts, optimize checkout, and scale revenue.",
+        "telephone": "+65-8000-0000",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "13 Lorong 8 Toa Payoh, #04-11, Braddell Tech",
+          "addressLocality": "Singapore",
+          "postalCode": "319261",
+          "addressCountry": "SG"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 1.3346,
+          "longitude": 103.8568
+        },
+        "areaServed": "Singapore",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "10:00",
+            "closes": "14:00"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

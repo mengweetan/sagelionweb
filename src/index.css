@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cloud text-slate-ink font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+
+  /* Visible keyboard focus everywhere */
+  :focus-visible {
+    @apply outline-none ring-2 ring-flame ring-offset-2 ring-offset-cloud rounded-sm;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-container px-5 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-flame-dark;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-display font-medium
+      transition-all duration-200 focus-visible:ring-offset-0;
+  }
+
+  .btn-primary {
+    @apply btn bg-flame px-6 py-3 text-white shadow-cta
+      hover:bg-flame-dark hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-ghost {
+    @apply btn border border-ink/15 bg-cloud-100 px-6 py-3 text-ink
+      hover:border-flame/40 hover:text-flame;
+  }
+
+  .btn-dark {
+    @apply btn bg-ink px-6 py-3 text-white hover:bg-ink-700 hover:-translate-y-0.5;
+  }
+
+  .card {
+    @apply rounded-3xl bg-cloud-100 p-7 shadow-card ring-1 ring-ink/5 transition-all duration-300;
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* No-JS fallback: pre-rendered HTML ships with Framer Motion's initial
+   inline styles (opacity:0). If scripts never run, force everything visible. */
+.no-js [style*='opacity:0'] {
+  opacity: 1 !important;
+  transform: none !important;
+}
