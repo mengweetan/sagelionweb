@@ -3,7 +3,6 @@ import {
   Phone,
   Mail,
   MapPin,
-  ShoppingCart,
   Facebook,
   Instagram,
   Linkedin,
@@ -29,9 +28,13 @@ export default function Footer() {
         {/* Brand + NAP name */}
         <div>
           <Link to="/" className="flex items-center gap-2.5">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-transform-gradient text-white">
-              <ShoppingCart size={20} strokeWidth={2.25} />
-            </span>
+            <img
+              src={`${import.meta.env.BASE_URL}logo-light.png`}
+              alt=""
+              className="h-8 w-auto"
+              width="168"
+              height="80"
+            />
             <span className="font-display text-lg font-bold text-white">
               Cart Transformation
             </span>
@@ -49,7 +52,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="grid h-9 w-9 place-items-center rounded-full bg-white/8 text-white transition-colors hover:bg-coral"
+                  className="grid h-9 w-9 place-items-center rounded-full bg-white/8 text-white transition-colors hover:bg-flame"
                 >
                   <Icon size={16} />
                 </a>
@@ -65,7 +68,7 @@ export default function Footer() {
           </h3>
           <address className="mt-4 space-y-3 text-sm not-italic">
             <p className="flex gap-2.5">
-              <MapPin size={16} className="mt-0.5 shrink-0 text-coral" />
+              <MapPin size={16} className="mt-0.5 shrink-0 text-flame" />
               <span>
                 {site.address.line1}
                 <br />
@@ -77,18 +80,18 @@ export default function Footer() {
             <p>
               <a
                 href={`tel:${site.phone.tel}`}
-                className="flex items-center gap-2.5 hover:text-coral-light"
+                className="flex items-center gap-2.5 hover:text-flame-light"
               >
-                <Phone size={16} className="shrink-0 text-coral" />
+                <Phone size={16} className="shrink-0 text-flame" />
                 {site.phone.display}
               </a>
             </p>
             <p>
               <a
                 href={`mailto:${site.email}`}
-                className="flex items-center gap-2.5 hover:text-coral-light"
+                className="flex items-center gap-2.5 hover:text-flame-light"
               >
-                <Mail size={16} className="shrink-0 text-coral" />
+                <Mail size={16} className="shrink-0 text-flame" />
                 {site.email}
               </a>
             </p>
@@ -123,27 +126,27 @@ export default function Footer() {
           </h3>
           <ul className="mt-4 space-y-2.5 text-sm">
             <li>
-              <Link to="/services" className="hover:text-coral-light">
+              <Link to="/services" className="hover:text-flame-light">
                 Services
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-coral-light">
+              <Link to="/about" className="hover:text-flame-light">
                 About us
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-coral-light">
+              <Link to="/contact" className="hover:text-flame-light">
                 Book / Get a quote
               </Link>
             </li>
             <li>
-              <Link to="/privacy" className="hover:text-coral-light">
+              <Link to="/privacy" className="hover:text-flame-light">
                 Privacy policy
               </Link>
             </li>
             <li>
-              <Link to="/terms" className="hover:text-coral-light">
+              <Link to="/terms" className="hover:text-flame-light">
                 Terms of service
               </Link>
             </li>

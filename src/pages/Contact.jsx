@@ -35,7 +35,7 @@ export default function Contact() {
   }
 
   const field =
-    'w-full rounded-2xl border border-ink/12 bg-white px-4 py-3 text-sm text-ink placeholder:text-slate-soft/70 focus:border-violet focus-visible:ring-2 focus-visible:ring-violet/40'
+    'w-full rounded-2xl border border-ink/12 bg-white px-4 py-3 text-sm text-ink placeholder:text-slate-soft/70 focus:border-flame focus-visible:ring-2 focus-visible:ring-flame/40'
 
   return (
     <PageTransition>
@@ -44,7 +44,7 @@ export default function Contact() {
       <section className="relative overflow-hidden bg-ink py-16 text-white md:py-20">
         <div className="container-x relative z-10">
           <Reveal className="max-w-3xl">
-            <span className="eyebrow text-violet-light">
+            <span className="eyebrow text-flame-light">
               <CalendarCheck size={14} /> Book · Quote · Call
             </span>
             <h1 className="mt-4 text-4xl font-bold sm:text-5xl">
@@ -75,7 +75,7 @@ export default function Contact() {
                 <p className="mt-3 max-w-md text-slate-soft">
                   Thanks, {form.name.split(' ')[0]}. We'll review your store and reply within
                   one business day. Need a faster answer? Call us at{' '}
-                  <a href={`tel:${site.phone.tel}`} className="font-semibold text-violet">
+                  <a href={`tel:${site.phone.tel}`} className="font-semibold text-flame">
                     {site.phone.display}
                   </a>
                   .
@@ -113,7 +113,7 @@ export default function Contact() {
                       autoComplete="name"
                     />
                     {errors.name && (
-                      <p className="mt-1 text-xs text-coral-dark">{errors.name}</p>
+                      <p className="mt-1 text-xs text-flame-dark">{errors.name}</p>
                     )}
                   </div>
 
@@ -132,7 +132,7 @@ export default function Contact() {
                       autoComplete="email"
                     />
                     {errors.email && (
-                      <p className="mt-1 text-xs text-coral-dark">{errors.email}</p>
+                      <p className="mt-1 text-xs text-flame-dark">{errors.email}</p>
                     )}
                   </div>
 
@@ -200,7 +200,7 @@ export default function Contact() {
                       placeholder="Platform, monthly orders, and where you think you're losing sales…"
                     />
                     {errors.message && (
-                      <p className="mt-1 text-xs text-coral-dark">{errors.message}</p>
+                      <p className="mt-1 text-xs text-flame-dark">{errors.message}</p>
                     )}
                   </div>
                 </div>
@@ -215,7 +215,7 @@ export default function Contact() {
           {/* Quick contact */}
           <Reveal delay={0.1} className="flex flex-col gap-5">
             <a href={`tel:${site.phone.tel}`} className="card flex items-center gap-4 hover:shadow-cardHover">
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-coral/12 text-coral-dark">
+              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-flame/12 text-flame-dark">
                 <Phone size={20} />
               </span>
               <div>
@@ -240,7 +240,7 @@ export default function Contact() {
             </a>
 
             <a href={`mailto:${site.email}`} className="card flex items-center gap-4 hover:shadow-cardHover">
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-violet/12 text-violet">
+              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-flame/12 text-flame">
                 <Mail size={20} />
               </span>
               <div>
@@ -251,7 +251,7 @@ export default function Contact() {
 
             <div className="card">
               <h3 className="flex items-center gap-2 font-display font-bold text-ink">
-                <Clock size={18} className="text-violet" /> Opening hours
+                <Clock size={18} className="text-flame" /> Opening hours
               </h3>
               <dl className="mt-3 space-y-2 text-sm">
                 {site.hours.map((h) => (

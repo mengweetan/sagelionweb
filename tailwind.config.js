@@ -4,38 +4,34 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Deep indigo-plum "ink" for dark sections
+        // Warm charcoal "ink" for dark sections (from the logo: #433B38)
         ink: {
-          DEFAULT: '#1A1530',
-          900: '#120E22',
-          800: '#1A1530',
-          700: '#251D43',
-          600: '#332857',
+          DEFAULT: '#3E3631',
+          900: '#2E2723',
+          800: '#3E3631',
+          700: '#4A413B',
+          600: '#5C5049',
         },
+        // Warm off-white for light sections
         cloud: {
-          DEFAULT: '#F7F6FB',
-          100: '#FFFFFF',
-          200: '#EEECF6',
+          DEFAULT: '#F4F0EA',
+          100: '#FCFAF6',
+          200: '#E7E0D5',
         },
-        violet: {
-          DEFAULT: '#6D28D9',
-          light: '#8B5CF6',
-          dark: '#5B21B6',
+        // Brand orange (from the logo: #F15A25) — the single high-energy accent
+        flame: {
+          DEFAULT: '#F15A25',
+          light: '#F6815A',
+          dark: '#CC470F',
         },
-        // Warm coral CTA — the single high-contrast accent
-        coral: {
-          DEFAULT: '#FB6F47',
-          dark: '#E85A33',
-          light: '#FF8B68',
-        },
-        // Mint reserved strictly for positive metrics
+        // Reserved strictly for positive metrics
         mint: {
-          DEFAULT: '#34D399',
-          dark: '#10B981',
+          DEFAULT: '#2FB888',
+          dark: '#0F9E6E',
         },
         slate: {
-          ink: '#2D2A3A',
-          soft: '#6B6680',
+          ink: '#2E2926',
+          soft: '#6E665F',
         },
       },
       fontFamily: {
@@ -47,13 +43,13 @@ export default {
         container: '1180px',
       },
       boxShadow: {
-        card: '0 1px 2px rgba(26,21,48,0.04), 0 12px 40px -12px rgba(26,21,48,0.18)',
-        cardHover: '0 1px 2px rgba(26,21,48,0.04), 0 24px 60px -16px rgba(109,40,217,0.28)',
-        cta: '0 10px 30px -8px rgba(251,111,71,0.55)',
+        card: '0 1px 2px rgba(62,54,49,0.05), 0 12px 40px -12px rgba(62,54,49,0.20)',
+        cardHover: '0 1px 2px rgba(62,54,49,0.05), 0 24px 60px -16px rgba(241,90,37,0.28)',
+        cta: '0 10px 30px -8px rgba(241,90,37,0.50)',
       },
       backgroundImage: {
         'transform-gradient':
-          'linear-gradient(120deg, #6D28D9 0%, #8B5CF6 45%, #FB6F47 100%)',
+          'linear-gradient(120deg, #F15A25 0%, #F89A4C 100%)',
       },
       keyframes: {
         'fade-up': {

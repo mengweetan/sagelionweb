@@ -13,7 +13,7 @@ export default function Terms() {
           <p className="mt-3 text-sm text-slate-soft">Last updated: {new Date().getFullYear()}</p>
 
           <div className="mt-8 space-y-6">
-            <p className="rounded-2xl bg-coral/8 p-4 text-sm text-slate-ink ring-1 ring-coral/15">
+            <p className="rounded-2xl bg-flame/8 p-4 text-sm text-slate-ink ring-1 ring-flame/15">
               ⚠️ Placeholder text. Have these terms reviewed by a Singapore-qualified
               professional before publishing.
             </p>
@@ -45,7 +45,7 @@ export default function Terms() {
               <h2 className="text-xl font-bold text-ink">Contact</h2>
               <p className="mt-2 text-slate-soft">
                 Questions? Email{' '}
-                <a href={`mailto:${site.email}`} className="font-semibold text-violet">
+                <a href={`mailto:${site.email}`} className="font-semibold text-flame">
                   {site.email}
                 </a>{' '}
                 or call {site.phone.display}.

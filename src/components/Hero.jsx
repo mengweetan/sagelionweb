@@ -22,18 +22,18 @@ export default function Hero() {
       {/* Ambient gradient glow */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-40 -top-40 h-[36rem] w-[36rem] rounded-full bg-violet/30 blur-[120px]"
+        className="pointer-events-none absolute -right-40 -top-40 h-[36rem] w-[36rem] rounded-full bg-flame/30 blur-[120px]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-40 -left-20 h-[28rem] w-[28rem] rounded-full bg-coral/20 blur-[120px]"
+        className="pointer-events-none absolute -bottom-40 -left-20 h-[28rem] w-[28rem] rounded-full bg-flame-light/20 blur-[120px]"
       />
 
       <div className="container-x relative z-10 grid gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         {/* Copy */}
         <motion.div variants={stagger} initial="hidden" animate="show">
-          <motion.span variants={item} className="eyebrow text-violet-light">
-            <span className="h-1.5 w-1.5 rounded-full bg-coral" />
+          <motion.span variants={item} className="eyebrow text-flame-light">
+            <span className="h-1.5 w-1.5 rounded-full bg-flame" />
             E-commerce conversion · {site.serviceArea}
           </motion.span>
 
@@ -61,7 +61,7 @@ export default function Hero() {
             <Link to="/contact" className="btn-primary text-base">
               Book a free audit <ArrowRight size={18} />
             </Link>
-            <a href={`tel:${site.phone.tel}`} className="btn-ghost border-white/20 bg-white/5 text-white text-base hover:border-coral hover:text-coral-light">
+            <a href={`tel:${site.phone.tel}`} className="btn-ghost border-white/20 bg-white/5 text-white text-base hover:border-flame hover:text-flame-light">
               <Phone size={18} /> Call {site.phone.display}
             </a>
           </motion.div>
@@ -69,7 +69,7 @@ export default function Hero() {
           <motion.div variants={item} className="mt-8 flex items-center gap-4 text-sm text-cloud-200/70">
             <span className="flex">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} size={16} className="fill-coral text-coral" />
+                <Star key={i} size={16} className="fill-flame text-flame" />
               ))}
             </span>
             <span>Trusted by 120+ Singapore merchants</span>
@@ -100,7 +100,7 @@ export default function Hero() {
             <p className="font-mono text-[10px] uppercase tracking-wider text-cloud-200/60">
               Before
             </p>
-            <p className="mt-0.5 font-mono text-xl font-bold text-coral-light">68%</p>
+            <p className="mt-0.5 font-mono text-xl font-bold text-flame-light">68%</p>
             <p className="text-[11px] text-cloud-200/70">carts abandoned</p>
           </motion.div>
 

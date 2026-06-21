@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Phone, Clock, Menu, X, ShoppingCart } from 'lucide-react'
+import { Phone, Clock, Menu, X } from 'lucide-react'
 import { site } from '../config/site.js'
 
 const nav = [
@@ -14,9 +14,13 @@ const nav = [
 function Logo() {
   return (
     <Link to="/" className="flex items-center gap-2.5" aria-label={`${site.name} home`}>
-      <span className="grid h-10 w-10 place-items-center rounded-xl bg-transform-gradient text-white shadow-md">
-        <ShoppingCart size={20} strokeWidth={2.25} />
-      </span>
+      <img
+        src={`${import.meta.env.BASE_URL}logo-dark.png`}
+        alt=""
+        className="h-8 w-auto"
+        width="168"
+        height="80"
+      />
       <span className="flex flex-col leading-none">
         <span className="font-display text-lg font-bold text-ink">Cart Transformation</span>
         <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-soft">
@@ -48,9 +52,9 @@ export default function Header() {
         <div className="container-x flex h-9 items-center justify-between text-[13px]">
           <a
             href={`tel:${site.phone.tel}`}
-            className="flex items-center gap-2 font-medium hover:text-coral-light"
+            className="flex items-center gap-2 font-medium hover:text-flame-light"
           >
-            <Phone size={14} className="text-coral" />
+            <Phone size={14} className="text-flame" />
             {site.phone.display}
           </a>
           <span className="flex items-center gap-2 text-cloud-200">
@@ -79,7 +83,7 @@ export default function Header() {
                 end={item.to === '/'}
                 className={({ isActive }) =>
                   `relative font-display text-[15px] font-medium transition-colors ${
-                    isActive ? 'text-violet' : 'text-ink hover:text-violet'
+                    isActive ? 'text-flame' : 'text-ink hover:text-flame'
                   }`
                 }
               >
@@ -89,7 +93,7 @@ export default function Header() {
                     {isActive && (
                       <motion.span
                         layoutId="nav-underline"
-                        className="absolute -bottom-1.5 left-0 h-0.5 w-full rounded-full bg-coral"
+                        className="absolute -bottom-1.5 left-0 h-0.5 w-full rounded-full bg-flame"
                       />
                     )}
                   </>
@@ -143,7 +147,7 @@ export default function Header() {
                   end={item.to === '/'}
                   className={({ isActive }) =>
                     `border-b border-ink/5 py-3 font-display text-base ${
-                      isActive ? 'text-violet' : 'text-ink'
+                      isActive ? 'text-flame' : 'text-ink'
                     }`
                   }
                 >

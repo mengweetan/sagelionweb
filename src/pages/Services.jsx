@@ -32,7 +32,7 @@ export default function Services() {
       <section className="relative overflow-hidden bg-ink py-16 text-white md:py-20">
         <div className="container-x relative z-10">
           <Reveal className="max-w-3xl">
-            <span className="eyebrow text-violet-light">Services</span>
+            <span className="eyebrow text-flame-light">Services</span>
             <h1 className="mt-4 text-4xl font-bold sm:text-5xl">
               Everything you need to convert more shoppers
             </h1>

@@ -13,11 +13,11 @@ export default function CTASection({
         <Reveal className="relative overflow-hidden rounded-[32px] bg-ink px-7 py-14 text-center text-white md:px-16">
           <div
             aria-hidden
-            className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-violet/30 blur-[100px]"
+            className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-flame/30 blur-[100px]"
           />
           <div
             aria-hidden
-            className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-coral/25 blur-[100px]"
+            className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-flame-light/20 blur-[100px]"
           />
           <div className="relative mx-auto max-w-2xl">
             <h2 className="text-3xl font-bold leading-tight sm:text-4xl">{heading}</h2>
@@ -28,7 +28,7 @@ export default function CTASection({
               </Link>
               <a
                 href={`tel:${site.phone.tel}`}
-                className="btn-ghost border-white/20 bg-white/5 text-base text-white hover:border-coral hover:text-coral-light"
+                className="btn-ghost border-white/20 bg-white/5 text-base text-white hover:border-flame hover:text-flame-light"
               >
                 <Phone size={18} /> {site.phone.display}
               </a>

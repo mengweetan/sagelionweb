@@ -27,7 +27,7 @@ export default function ServiceCard({ service }) {
   return (
     <article className="card group flex flex-col hover:-translate-y-1 hover:shadow-cardHover">
       <div className="flex items-center justify-between">
-        <span className="grid h-12 w-12 place-items-center rounded-2xl bg-violet/10 text-violet transition-colors group-hover:bg-violet group-hover:text-white">
+        <span className="grid h-12 w-12 place-items-center rounded-2xl bg-flame/10 text-flame transition-colors group-hover:bg-flame group-hover:text-white">
           <Icon size={22} strokeWidth={2} />
         </span>
         <span
@@ -55,7 +55,7 @@ export default function ServiceCard({ service }) {
 
       <Link
         to="/contact"
-        className="mt-6 inline-flex items-center gap-1.5 font-display text-sm font-semibold text-violet transition-colors hover:text-coral"
+        className="mt-6 inline-flex items-center gap-1.5 font-display text-sm font-semibold text-flame transition-colors hover:text-flame"
       >
         Request this service <ArrowRight size={15} />
       </Link>

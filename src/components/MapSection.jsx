@@ -37,7 +37,7 @@ export default function MapSection() {
           <Reveal delay={0.1} className="flex flex-col gap-5">
             <div className="card">
               <h3 className="flex items-center gap-2 font-display text-lg font-bold text-ink">
-                <MapPin size={18} className="text-coral" /> Address
+                <MapPin size={18} className="text-flame" /> Address
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-ink">
                 {site.address.line1}
@@ -50,7 +50,7 @@ export default function MapSection() {
                 href={site.mapLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-1.5 font-display text-sm font-semibold text-violet hover:text-coral"
+                className="mt-4 inline-flex items-center gap-1.5 font-display text-sm font-semibold text-flame hover:text-flame"
               >
                 Open in Google Maps <ExternalLink size={14} />
               </a>
@@ -58,21 +58,21 @@ export default function MapSection() {
 
             <div className="card space-y-4">
               <div className="flex gap-3">
-                <Train size={18} className="mt-0.5 shrink-0 text-violet" />
+                <Train size={18} className="mt-0.5 shrink-0 text-flame" />
                 <p className="text-sm text-slate-ink">
                   <span className="font-semibold text-ink">By MRT:</span> 7-min walk from
                   Braddell (NS9) or Toa Payoh (NS19) stations.
                 </p>
               </div>
               <div className="flex gap-3">
-                <Car size={18} className="mt-0.5 shrink-0 text-violet" />
+                <Car size={18} className="mt-0.5 shrink-0 text-flame" />
                 <p className="text-sm text-slate-ink">
                   <span className="font-semibold text-ink">Parking:</span> Visitor lots in
                   Braddell Tech (B1–B2). Take lift to Level 4, turn left for #04-11.
                 </p>
               </div>
               <div className="flex gap-3">
-                <Clock size={18} className="mt-0.5 shrink-0 text-violet" />
+                <Clock size={18} className="mt-0.5 shrink-0 text-flame" />
                 <p className="text-sm text-slate-ink">
                   <span className="font-semibold text-ink">Visits:</span> By appointment —{' '}
                   {site.hoursShort}.

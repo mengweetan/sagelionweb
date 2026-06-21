@@ -13,7 +13,7 @@ export default function Privacy() {
           <p className="mt-3 text-sm text-slate-soft">Last updated: {new Date().getFullYear()}</p>
 
           <div className="prose mt-8 space-y-6 text-slate-ink">
-            <p className="rounded-2xl bg-coral/8 p-4 text-sm text-slate-ink ring-1 ring-coral/15">
+            <p className="rounded-2xl bg-flame/8 p-4 text-sm text-slate-ink ring-1 ring-flame/15">
               ⚠️ Placeholder text. Replace this with a policy reviewed for the Singapore
               Personal Data Protection Act (PDPA) before going live.
             </p>
@@ -40,7 +40,7 @@ export default function Privacy() {
               <p className="mt-2 text-slate-soft">
                 You may request access to, correction of, or withdrawal of consent for the
                 personal data we hold. Contact us at{' '}
-                <a href={`mailto:${site.email}`} className="font-semibold text-violet">
+                <a href={`mailto:${site.email}`} className="font-semibold text-flame">
                   {site.email}
                 </a>
                 .

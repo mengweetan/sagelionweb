@@ -74,7 +74,7 @@ export default function About() {
               style={{ backgroundImage: `url(${images.team})` }}
             />
             <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white p-5 shadow-xl ring-1 ring-ink/5 sm:block">
-              <p className="font-mono text-3xl font-bold text-violet">2018</p>
+              <p className="font-mono text-3xl font-bold text-flame">2018</p>
               <p className="text-sm text-slate-soft">helping SG stores grow</p>
             </div>
           </Reveal>
@@ -94,7 +94,7 @@ export default function About() {
             {values.map((v, i) => (
               <Reveal key={v.title} delay={i * 0.08}>
                 <div className="card h-full">
-                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-violet/10 text-violet">
+                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-flame/10 text-flame">
                     <v.icon size={22} />
                   </span>
                   <h3 className="mt-5 text-xl font-bold text-ink">{v.title}</h3>
@@ -128,7 +128,7 @@ export default function About() {
                   />
                   <div>
                     <h3 className="text-lg font-bold text-ink">{m.name}</h3>
-                    <p className="font-mono text-xs uppercase tracking-wide text-violet">
+                    <p className="font-mono text-xs uppercase tracking-wide text-flame">
                       {m.role}
                     </p>
                     <p className="mt-2 text-sm text-slate-soft">{m.bio}</p>
@@ -140,9 +140,9 @@ export default function About() {
 
           {/* Community */}
           <Reveal delay={0.1}>
-            <div className="mt-12 rounded-3xl bg-violet/8 p-8 ring-1 ring-violet/10 md:p-10">
+            <div className="mt-12 rounded-3xl bg-flame/8 p-8 ring-1 ring-flame/10 md:p-10">
               <h3 className="flex items-center gap-2 font-display text-xl font-bold text-ink">
-                <Heart size={20} className="text-coral" /> In the community
+                <Heart size={20} className="text-flame" /> In the community
               </h3>
               <p className="mt-3 max-w-3xl text-slate-soft">
                 We run free monthly conversion clinics for early-stage SG sellers, mentor at

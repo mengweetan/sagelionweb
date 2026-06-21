@@ -53,7 +53,7 @@ export default function Home() {
             </div>
             <Link
               to="/services"
-              className="inline-flex shrink-0 items-center gap-1.5 font-display font-semibold text-violet hover:text-coral"
+              className="inline-flex shrink-0 items-center gap-1.5 font-display font-semibold text-flame hover:text-flame"
             >
               View all services <ArrowRight size={16} />
             </Link>
@@ -74,7 +74,7 @@ export default function Home() {
         <SectionSeam position="top" />
         <div className="container-x relative z-10">
           <Reveal className="max-w-2xl">
-            <span className="eyebrow text-violet-light">How it works</span>
+            <span className="eyebrow text-flame-light">How it works</span>
             <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
               A simple path from leaking to leading
             </h2>
@@ -84,7 +84,7 @@ export default function Home() {
               <Reveal key={s.title} delay={i * 0.1}>
                 <div className="h-full rounded-3xl bg-ink-700/60 p-7 ring-1 ring-white/10">
                   <div className="flex items-center gap-3">
-                    <span className="font-mono text-sm text-coral-light">
+                    <span className="font-mono text-sm text-flame-light">
                       0{i + 1}
                     </span>
                     <span className="grid h-11 w-11 place-items-center rounded-2xl bg-transform-gradient">

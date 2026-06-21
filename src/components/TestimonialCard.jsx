@@ -6,10 +6,10 @@ export default function TestimonialCard({ t }) {
       <div className="flex items-center justify-between">
         <span className="flex" aria-label="5 out of 5 stars">
           {[...Array(5)].map((_, i) => (
-            <Star key={i} size={16} className="fill-coral text-coral" />
+            <Star key={i} size={16} className="fill-flame text-flame" />
           ))}
         </span>
-        <Quote size={22} className="text-violet/20" />
+        <Quote size={22} className="text-flame/20" />
       </div>
 
       <blockquote className="mt-4 flex-1 text-[15px] leading-relaxed text-slate-ink">
