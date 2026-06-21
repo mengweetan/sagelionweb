@@ -25,18 +25,31 @@ const values = [
 
 const team = [
   {
-    name: 'Jordan Lim',
-    role: 'Founder & Conversion Lead',
+    name: 'FlowDaptor Pte Ltd',
+    role: 'Accusantium Doloremque',
     img: images.founder,
-    bio: '12 years building and rescuing online stores across SE Asia.',
+    bio: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
   },
   {
-    name: 'Mei Chen',
-    role: 'Head of Engineering',
+    name: 'Sarah Nguyen',
+    role: 'Voluptas Aspernatur',
     img: images.founder2,
-    bio: 'WooCommerce and headless specialist obsessed with page speed.',
+    bio: 'Laudantium totam em aperiam, eaque ipsa quae ab illo inventore.',
+  },
+  {
+    name: 'Kevin Chua',
+    role: 'Beatae Vitae Dicta',
+    img: images.founder,
+    bio: 'Veritatis et quasi architecto beatae vitae dicta sunt eplicabo.',
+  },
+  {
+    name: 'Anna',
+    role: 'Magni Dolores Eos',
+    img: images.founder2,
+    bio: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut fu.',
   },
 ]
+
 
 export default function About() {
   return (
