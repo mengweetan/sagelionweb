@@ -82,7 +82,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-cloud py-16 md:py-24">
         <div className="container-x">
           <Reveal className="max-w-2xl">
             <span className="eyebrow">What we stand for</span>

@@ -10,7 +10,7 @@ const stats = [
 
 export default function StatBand() {
   return (
-    <section className="border-y border-ink/5 bg-white">
+    <section className="border-y border-ink/5 bg-cloud">
       <div className="container-x grid grid-cols-2 gap-x-6 gap-y-10 py-12 lg:grid-cols-4">
         {stats.map((s, i) => (
           <Reveal key={s.label} delay={i * 0.08} className="text-center lg:text-left">

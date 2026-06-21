@@ -2,6 +2,7 @@ import { PageTransition, Reveal } from '../components/PageTransition.jsx'
 import Seo from '../components/Seo.jsx'
 import ServiceCard from '../components/ServiceCard.jsx'
 import CTASection from '../components/CTASection.jsx'
+import SectionSeam from '../components/SectionSeam.jsx'
 import { services } from '../data/services.js'
 
 const faqs = [
@@ -28,8 +29,8 @@ export default function Services() {
     <PageTransition>
       <Seo title='E-commerce Services & Pricing' description='Checkout optimization, cart abandonment recovery, WooCommerce development, and conversion audits for Singapore e-commerce stores.' />
       {/* Page header */}
-      <section className="bg-ink py-16 text-white md:py-20">
-        <div className="container-x">
+      <section className="relative overflow-hidden bg-ink py-16 text-white md:py-20">
+        <div className="container-x relative z-10">
           <Reveal className="max-w-3xl">
             <span className="eyebrow text-violet-light">Services</span>
             <h1 className="mt-4 text-4xl font-bold sm:text-5xl">
@@ -41,6 +42,7 @@ export default function Services() {
             </p>
           </Reveal>
         </div>
+        <SectionSeam position="bottom" />
       </section>
 
       {/* Grid */}
@@ -55,7 +57,7 @@ export default function Services() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-cloud py-16 md:py-24">
         <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <Reveal>
             <span className="eyebrow">FAQ</span>

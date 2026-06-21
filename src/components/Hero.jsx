@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { Phone, ArrowRight, Star, TrendingUp } from 'lucide-react'
 import { site } from '../config/site.js'
 import { images } from '../data/images.js'
+import SectionSeam from './SectionSeam.jsx'
 
 export default function Hero() {
   const reduce = useReducedMotion()
@@ -28,7 +29,7 @@ export default function Hero() {
         className="pointer-events-none absolute -bottom-40 -left-20 h-[28rem] w-[28rem] rounded-full bg-coral/20 blur-[120px]"
       />
 
-      <div className="container-x relative grid gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+      <div className="container-x relative z-10 grid gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         {/* Copy */}
         <motion.div variants={stagger} initial="hidden" animate="show">
           <motion.span variants={item} className="eyebrow text-violet-light">
@@ -124,6 +125,8 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
+
+      <SectionSeam position="bottom" />
     </section>
   )
 }

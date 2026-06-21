@@ -10,6 +10,7 @@ import {
   MessageCircle,
 } from 'lucide-react'
 import { site } from '../config/site.js'
+import SectionSeam from './SectionSeam.jsx'
 
 const socialIcons = [
   { key: 'facebook', Icon: Facebook, label: 'Facebook' },
@@ -22,8 +23,9 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-ink text-cloud-200">
-      <div className="container-x grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="relative overflow-hidden bg-ink text-cloud-200">
+      <SectionSeam position="top" />
+      <div className="container-x relative z-10 grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
         {/* Brand + NAP name */}
         <div>
           <Link to="/" className="flex items-center gap-2.5">

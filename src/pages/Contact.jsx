@@ -4,6 +4,7 @@ import { Phone, Mail, Clock, CalendarCheck, CheckCircle2, MessageCircle } from '
 import { PageTransition, Reveal } from '../components/PageTransition.jsx'
 import Seo from '../components/Seo.jsx'
 import MapSection from '../components/MapSection.jsx'
+import SectionSeam from '../components/SectionSeam.jsx'
 import { site } from '../config/site.js'
 import { services } from '../data/services.js'
 
@@ -40,8 +41,8 @@ export default function Contact() {
     <PageTransition>
       <Seo title='Contact — Book a Free Conversion Audit' description='Request a free quote or book a conversion audit. Call, WhatsApp, or visit our Braddell Tech studio in Toa Payoh, Singapore.' />
       {/* Header */}
-      <section className="bg-ink py-16 text-white md:py-20">
-        <div className="container-x">
+      <section className="relative overflow-hidden bg-ink py-16 text-white md:py-20">
+        <div className="container-x relative z-10">
           <Reveal className="max-w-3xl">
             <span className="eyebrow text-violet-light">
               <CalendarCheck size={14} /> Book · Quote · Call
@@ -55,6 +56,7 @@ export default function Contact() {
             </p>
           </Reveal>
         </div>
+        <SectionSeam position="bottom" />
       </section>
 
       {/* Form + quick contact */}

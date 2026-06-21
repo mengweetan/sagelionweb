@@ -9,6 +9,7 @@ import MapSection from '../components/MapSection.jsx'
 import CTASection from '../components/CTASection.jsx'
 import { services } from '../data/services.js'
 import { testimonials } from '../data/testimonials.js'
+import SectionSeam from '../components/SectionSeam.jsx'
 import Seo from '../components/Seo.jsx'
 
 const steps = [
@@ -69,8 +70,9 @@ export default function Home() {
       </section>
 
       {/* Process */}
-      <section className="bg-ink py-16 text-white md:py-24">
-        <div className="container-x">
+      <section className="relative overflow-hidden bg-ink py-16 text-white md:py-24">
+        <SectionSeam position="top" />
+        <div className="container-x relative z-10">
           <Reveal className="max-w-2xl">
             <span className="eyebrow text-violet-light">How it works</span>
             <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
@@ -98,6 +100,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+        <SectionSeam position="bottom" />
       </section>
 
       {/* Testimonials */}
