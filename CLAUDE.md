@@ -43,7 +43,7 @@ The site styling register is **"studio" — warm paper, rounded cards, gold acce
 
 ## External dependencies worth knowing
 
-- Workflows CTA links to `https://flowdaptorai.vercel.app/store` (sister project, free n8n workflow library).
+- Workflows CTA links to `https://flowdaptor.ai/store/` (sister project, free n8n workflow library).
 - Contact email is `contact@sagelioncapital.org`.
 - The hero/journal videos are hosted locally (`assets/hero-video-xs.mp4`) and remotely (`art.sagelioncapital.org/wp-content/uploads/...`).
 
