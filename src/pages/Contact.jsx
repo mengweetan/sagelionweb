@@ -11,10 +11,6 @@ import { services } from '../data/services.js'
 
 const initial = { name: '', email: '', phone: '', store: '', service: '', message: '' }
 
-export default function Contact() {
-  const [form, setForm] = useState(initial)
-  const [sent, setSent] = useState(false)
-  const [errors, setErrors] = useState({})
 // Honeypot: a field real visitors never see or fill. send.php checks this
 // exact field name ($_POST['website']) and silently accepts (no error) if
 // it's non-empty, treating it as a bot.
