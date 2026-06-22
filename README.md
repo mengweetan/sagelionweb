@@ -24,7 +24,6 @@ Almost everything you need to personalize lives in **one file**:
 
 - `src/config/site.js` — phone number, business hours, email, address, social links,
   and the Google Maps embed. Placeholders are marked with `⚠️`.
-<<<<<<< HEAD
 - `public/logo-dark.png` / `logo-light.png` / `favicon.png` — generated from your
   uploaded logo. Re-export at higher resolution from source artwork if you need
   crisper edges at large sizes.
@@ -33,7 +32,6 @@ Almost everything you need to personalize lives in **one file**:
   fixed and the secondary stroke uses `currentColor`, so it renders charcoal on
   light surfaces and white on dark ones automatically. `public/logo.svg` is a
   standalone copy; `public/favicon.png` is the browser-tab icon.
->>>>>>> 7ccc5bbcb3a989da7d2d972f95eb502f0661dd83
 - `index.html` — the `og:image` in the JSON-LD points to `og-image.jpg`, which
   doesn't exist yet. Add a 1200×630 social-share image at `public/og-image.jpg`
   before launch (this powers link previews on Facebook/LinkedIn/WhatsApp/iMessage).
