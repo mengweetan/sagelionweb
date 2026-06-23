@@ -39,13 +39,13 @@ const team = [
   {
     name: 'Kevin Chua',
     role: 'Beatae Vitae Dicta',
-    img: images.founder,
+    img: images.founder3,
     bio: 'Veritatis et quasi architecto beatae vitae dicta sunt eplicabo.',
   },
   {
     name: 'Anna',
     role: 'Magni Dolores Eos',
-    img: images.founder2,
+    img: images.founder4,
     bio: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut fu.',
   },
 ]
