@@ -28,7 +28,7 @@ const team = [
     name: 'FlowDaptor Pte Ltd',
     role: 'AI Automation Company',
     img: images.founder,
-    bio: 'Helps SMEs implement self-hosted automation solutions using n8n and OpenClaw. By handling installation, customization, training, and support, FlowDaptor enables businesses to adopt AI and workflow automation without needing an internal technical team. Their one-time implementation model gives companies full ownership and control of PDPA-compliant automation systems on their own infrastructure, turning automation into a long-term business asset instead of a recurring subscription cost.',
+    bio: 'Helping SMEs implement self-hosted automation solutions using n8n and OpenClaw. By handling installation, customization, training, and support, FlowDaptor enables businesses to adopt AI and workflow automation without needing an internal technical team. Their one-time implementation model gives companies full ownership and control of PDPA-compliant automation systems on their own infrastructure, turning automation into a long-term business asset instead of a recurring subscription cost.',
     url: 'https://flowdaptor.ai/',
   },
   {
